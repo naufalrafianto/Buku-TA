@@ -1,0 +1,179 @@
+\chapter{PENDAHULUAN}
+\label{chap:pendahuluan}
+
+% Ubah bagian-bagian berikut dengan isi dari pendahuluan
+
+\section{Latar Belakang}
+\label{sec:latarbelakang}
+
+Pada dasarnya, sistem tiket elektronik tidak hanya meningkatkan kemudahan dalam
+pembelian dan penjualan tiket, tetapi juga membantu dalam manajemen tiket serta
+mengurangi risiko kehilangan tiket \parencite{qteishat2014}. Meskipun demikian,
+terdapat beberapa permasalahan dalam sistem tiket saat ini. Pertama, sistem ini
+bersifat terpusat sehingga harus cukup kuat dalam membangun kepercayaan
+pengguna. Dalam sistem terpusat, biasanya terdapat pengendali yang memproses
+dan menyimpan data serta menyediakan layanan, yang umumnya berasal dari pihak
+ketiga tepercaya \parencite{nakamoto2008bitcoin}. Pihak ketiga ini memang
+berperan penting dalam menjaga integritas dan keamanan data, namun juga dapat
+menjadi titik lemah apabila tidak andal atau menjadi target serangan siber.
+Ketergantungan pada penyedia layanan tertentu juga dapat menyebabkan gangguan
+layanan ketika terjadi kesalahan atau serangan, sehingga menciptakan kerentanan
+dalam transaksi yang seharusnya aman.
+
+Salah satu solusi yang ditawarkan untuk mengatasi permasalahan ini adalah
+adopsi teknologi blockchain, yang menawarkan pencatatan transaksi secara
+terdesentralisasi dan transparan \parencite{aventus2018}. Teknologi blockchain
+memungkinkan setiap transaksi dicatat dalam blok yang tidak dapat dimodifikasi
+dan saling terhubung, memberikan lapisan keamanan tambahan serta memungkinkan
+pengguna memverifikasi keabsahan tiket secara mandiri. Dengan demikian,
+blockchain menjadi solusi potensial untuk mengatasi isu transparansi, keamanan,
+dan integritas data dalam sistem tiket elektronik. Namun, biaya transaksi dan
+skalabilitas masih menjadi tantangan dalam implementasi blockchain, terutama
+pada jaringan utama Ethereum. Oleh karena itu, dibutuhkan pendekatan lanjutan
+guna mengeksplorasi solusi yang lebih efisien dan efektif.
+
+Lebih lanjut, blockchain juga mengubah paradigma kepemilikan aset digital
+melalui pengenalan Non-Fungible Token (NFT), yang membuka peluang baru dalam
+transaksi dan koleksi digital. Mengingat keterbatasan jaringan utama Ethereum,
+solusi Layer-2 seperti Optimism, Polygon zkEVM, dan Arbitrum muncul sebagai
+alternatif yang lebih efisien untuk mengimplementasikan NFT. Teknologi Layer-2
+memungkinkan transaksi lebih cepat dan murah tanpa mengorbankan keamanan
+jaringan utama. Dalam konteks ini, setiap NFT tetap mempertahankan
+karakteristik uniknya seperti ID global, kemampuan transfer, serta metadata,
+ditambah dengan keunggulan berupa biaya gas rendah dan throughput tinggi.
+
+Standar NFT pada Layer-2 mendukung interoperabilitas dengan ekosistem Ethereum
+yang lebih luas, memungkinkan perpindahan aset antara Layer-2 dan jaringan
+utama melalui jembatan lintas-rantai yang aman. Ini membuka peluang baru bagi
+kreator dan kolektor untuk berdagang secara aman dan efisien. Transparansi
+dalam pelacakan kepemilikan dan riwayat transaksi juga dapat meningkatkan
+kepercayaan pengguna. Meskipun tantangan seperti hak kekayaan intelektual dan
+kompleksitas interoperabilitas masih ada, adopsi NFT pada Layer-2 terus
+berkembang dan menunjukkan potensinya sebagai solusi skalabilitas yang layak.
+Penggunaan Layer-2 tidak hanya menjawab masalah biaya dan skalabilitas, tetapi
+juga membuka kemungkinan baru yang sebelumnya tidak dapat dijangkau secara
+ekonomi. Hal ini menunjukkan bahwa teknologi blockchain berpotensi besar dalam
+menciptakan sistem kepemilikan digital yang inklusif, efisien, dan
+berkelanjutan.
+
+\section{Permasalahan}
+\label{sec:permasalahan}
+
+Permasalahan penelitian ini dirumuskan sebagai berikut:
+\begin{enumerate}
+      \item Bagaimana solusi Layer-2 berbasis \textit{zero-knowledge rollup} seperti
+            \textit{Polygon zkEVM} dapat mengatasi keterbatasan skalabilitas dan biaya pada
+            sistem tiket konser berbasis \textit{blockchain} Layer-1 Ethereum?
+      \item Bagaimana integrasi sistem \textit{Layer-2} dengan smart contract NFT dapat
+            meningkatkan efisiensi transaksi, menurunkan biaya gas, serta tetap menjaga
+            keamanan dan keandalan dalam pengelolaan tiket konser digital?
+\end{enumerate}
+
+\section{Tujuan}
+Tujuan penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+      \item Menganalisis bagaimana solusi Layer-2 berbasis \textit{zero-knowledge rollup},
+            seperti \textit{Polygon zkEVM}, dapat meningkatkan skalabilitas sistem tiket
+            konser berbasis \textit{blockchain} Layer-1 Ethereum, terutama melalui
+            pengurangan waktu konfirmasi dan biaya transaksi.
+      \item Mengembangkan solusi integrasi sistem Layer-2 yang efisien untuk pengelolaan
+            tiket konser digital berbasis \textit{smart contract NFT}, dengan fokus pada
+            peningkatan efisiensi, pengurangan biaya transaksi, dan penguatan keamanan
+            data.
+\end{enumerate}
+
+\section{Batasan Masalah}
+\label{sec:batasanmasalah}
+
+Dalam penelitian ini, terdapat beberapa batasan masalah atau ruang lingkup
+sebagai berikut:
+
+\begin{enumerate}
+      \item Penelitian dibatasi pada praktik penjualan tiket dalam industri konser, tidak
+            mencakup acara lain seperti olahraga atau festival seni. Fokus ini untuk
+            memberikan analisis mendalam terkait masalah scalping dan penerapan teknologi
+            \textit{blockchain} pada konteks konser.
+
+      \item Penelitian hanya menggunakan teknologi \textit{blockchain} dan \textit{NFT}
+            sebagai solusi utama untuk permasalahan tiket konser. Teknologi lain seperti
+            sistem pembayaran alternatif atau teknologi non-blockchain tidak dibahas dalam
+            penelitian ini.
+
+      \item Penelitian menitikberatkan pada aspek keamanan data dan transparansi dalam
+            penerapan teknologi \textit{blockchain} dan \textit{NFT} pada tiket konser.
+            Aspek sosial dan ekonomi dari penggunaan teknologi ini tidak menjadi fokus
+            utama.
+
+      \item Penelitian difokuskan pada penggunaan jaringan \textit{Polygon zkEVM} sebagai
+            solusi \textit{Layer-2} dalam pengembangan platform tiket konser berbasis
+            \textit{blockchain} dan \textit{NFT}. Solusi \textit{Layer-2} lain, seperti
+            \textit{Optimism} atau \textit{Arbitrum}, tidak dianalisis atau dibandingkan.
+\end{enumerate}
+
+% \section{Sistematika Penulisan}
+% \label{sec:sistematikapenulisan}
+
+% Laporan penelitian tugas akhir ini terbagi menjadi beberapa bab yang disusun
+% secara sistematis, yaitu:
+
+% \begin{enumerate}[nolistsep]
+
+%       \item \textbf{BAB I Pendahuluan}
+
+%       Bab ini berisi latar belakang masalah, rumusan masalah, tujuan penelitian,
+%       manfaat penelitian, batasan masalah, dan sistematika penulisan yang menjadi
+%       dasar arah penelitian tugas akhir ini.
+
+%       \vspace{2ex}
+
+%       \item \textbf{BAB II Tinjauan Pustaka}
+
+%       Bab ini membahas teori-teori dan penelitian terdahulu yang berkaitan dengan
+%       teknologi \textit{blockchain}, NFT, Layer-2 Ethereum, serta aplikasi tiket
+%       elektronik dan marketplace digital sebagai landasan konseptual penelitian.
+
+%       \vspace{2ex}
+
+%       \item \textbf{BAB III Desain dan Implementasi Sistem}
+
+%       Bab ini menjelaskan perancangan sistem platform marketplace tiket konser
+%       berbasis smart contract di jaringan Layer-2 Polygon zkEVM, termasuk arsitektur
+%       sistem, desain smart contract, serta proses pengembangan dan integrasi komponen
+%       sistem.
+
+%       \vspace{2ex}
+
+%       \item \textbf{BAB IV Pengujian dan Analisa}
+
+%       Bab ini memaparkan metode pengujian sistem yang dilakukan, hasil pengujian dari
+%       segi fungsionalitas, efisiensi, keamanan, serta analisa terhadap performa
+%       platform dalam konteks biaya transaksi dan skalabilitas.
+
+%             \vspace{2ex}
+
+%             \item \textbf{BAB V Penutup}
+
+%             Bab ini berisi kesimpulan dari hasil penelitian, saran perbaikan dan
+%             pengembangan lebih lanjut, serta refleksi terhadap pencapaian tujuan penelitian
+%             yang telah dilakukan.
+
+%       \end{enumerate}
+
+\section{Manfaat Penelitian}
+\label{sec:manfaatpenelitian}
+
+Beberapa manfaat yang diharapkan dari penelitian ini meliputi:
+
+\begin{enumerate}
+      \item Implementasi teknologi \textit{blockchain} dapat mengurangi risiko pemalsuan
+            tiket dan praktik scalping, sehingga memberikan perlindungan yang lebih baik
+            bagi konsumen.
+
+      \item Sistem terdesentralisasi meningkatkan transparansi dalam proses verifikasi
+            keaslian tiket, sehingga pengguna dapat lebih yakin terhadap keaslian tiket
+            yang mereka beli.
+
+      \item Dengan menurunkan biaya transaksi dan meningkatkan keandalan dalam proses
+            pembelian tiket, pengalaman pengguna dapat ditingkatkan, sehingga lebih banyak
+            orang dapat menikmati acara tanpa khawatir akan harga yang tidak wajar.
+\end{enumerate}
