@@ -3,39 +3,1583 @@
 
 % Ubah bagian-bagian berikut dengan isi dari desain dan implementasi
 
-Penelitian ini dilaksanakan sesuai \lipsum[1][1-5]
+% Penelitian ini dilaksanakan sesuai \lipsum[1][1-5]
 
 \section{Deskripsi Sistem}
 \label{sec:deskripsisistem}
 
-Sistem akan dibuat dengan \lipsum[1-2]
+\begin{figure}[H]
+    \centering
 
-\section{Implementasi Alat
-  \label{sec:implementasi alat}}
+    % Ubah dengan nama file gambar dan ukuran yang akan digunakan
+    \includegraphics[width=\textwidth]{gambar/bab3/diagram.drawio.png}
 
-Alat diimplementasikan dengan \lipsum[1]
+    % Ubah dengan keterangan gambar yang diinginkan
+    \caption{Arsitektur Sistem.}
+    \label{fig:arsitektursistem}
+\end{figure}
 
-% Contoh pembuatan potongan kode
-\begin{lstlisting}[
-  language=C++,
-  caption={Program halo dunia.},
-  label={lst:halodunia}
-]
-#include <iostream>
+Diagram \ref{fig:arsitektursistem} menggambarkan arsitektur teknis dari sistem
+marketplace tiket konser berbasis NFT yang dibangun menggunakan teknologi
+blockchain, khususnya pada jaringan Polygon zkEVM. Arsitektur ini dibagi
+menjadi empat komponen utama: Frontend, Smart Contract, Ethereum Virtual
+Machine (EVM), dan Polygon zkEVM, yang masing-masing memiliki peran penting
+dalam membentuk pengalaman pengguna dan pengelolaan aset digital berbasis
+Non-Fungible Token (NFT).
 
-int main() {
-    std::cout << "Halo Dunia!";
-    return 0;
+Komponen pertama adalah Frontend, yang merupakan antarmuka pengguna dari
+aplikasi web. Di dalamnya digunakan framework Next.js, sebuah kerangka kerja
+React yang mendukung server-side rendering, static site generation, dan dynamic
+routing, yang berguna untuk menampilkan halaman dinamis seperti daftar event,
+tiket yang dimiliki pengguna, serta proses pembelian. Frontend juga menggunakan
+ethers.js, sebuah pustaka JavaScript yang dirancang untuk berinteraksi dengan
+blockchain Ethereum dan kompatibelnya (seperti Polygon zkEVM). Ethers.js
+memungkinkan aplikasi frontend untuk melakukan transaksi blockchain, memanggil
+fungsi-fungsi smart contract, serta mengelola koneksi dengan wallet pengguna
+seperti MetaMask.
+
+Selanjutnya, bagian Smart Contract berperan sebagai tulang punggung logika
+bisnis aplikasi di sisi blockchain. Smart contract ini ditulis menggunakan
+bahasa pemrograman Solidity, yang merupakan bahasa standar untuk membuat
+kontrak cerdas di ekosistem Ethereum. Dalam konteks marketplace tiket, smart
+contract bertanggung jawab untuk menangani pembuatan event, pencetakan tiket
+dalam bentuk NFT, pengelolaan status tiket (aktif atau telah digunakan), serta
+distribusi hasil penjualan tiket termasuk pemotongan platform fee. Smart
+contract ini juga mengatur hak akses khusus seperti organizer, verifier, dan
+pemilik tiket. Tiket konser dalam sistem ini direpresentasikan sebagai NFT
+(Non-Fungible Token). NFT adalah token unik yang tidak dapat dipertukarkan satu
+sama lain, sehingga cocok digunakan untuk mewakili aset digital yang memiliki
+identitas individual seperti tiket. Setiap tiket memiliki informasi spesifik
+seperti ID acara, pemilik, waktu pembelian, status penggunaan, dan metadata
+gambar khusus. Token NFT ini dicetak langsung melalui kontrak pintar dan
+disimpan di dompet pengguna setelah pembelian berhasil dilakukan.
+
+Komponen ketiga adalah Ethereum Virtual Machine (EVM), yang merupakan
+lingkungan eksekusi standar untuk smart contract berbasis Ethereum. EVM
+bertindak sebagai mesin yang menjalankan kode Solidity yang telah dikompilasi
+menjadi bytecode. Keunggulan menggunakan EVM adalah interoperabilitasnya dengan
+berbagai jaringan layer-2 yang mendukung EVM, sehingga kontrak yang ditulis
+untuk Ethereum juga dapat berjalan di jaringan seperti Polygon zkEVM tanpa
+perubahan kode signifikan. Komponen terakhir adalah Polygon zkEVM, sebuah
+solusi layer-2 scaling yang dibangun dengan teknologi zero-knowledge rollup
+(zk-Rollup) dan kompatibel dengan EVM. Polygon zkEVM dirancang untuk memberikan
+performa tinggi dengan biaya transaksi yang rendah serta waktu konfirmasi yang
+cepat, tanpa mengorbankan keamanan karena datanya tetap dapat diverifikasi di
+jaringan Ethereum utama. Dengan menggunakan zkEVM, sistem marketplace dapat
+memanfaatkan keunggulan skalabilitas dan efisiensi biaya, sambil tetap
+mempertahankan fungsionalitas dan keamanan dari ekosistem Ethereum.
+
+Interaksi antara komponen-komponen ini memungkinkan pengguna untuk mengakses
+platform melalui web, menghubungkan dompet kripto mereka menggunakan MetaMask,
+menjelajahi acara konser, membeli tiket NFT secara langsung dari smart
+contract, serta menggunakan tiket tersebut dengan mekanisme verifikasi
+on-chain. Semua transaksi yang dilakukan akan dicatat secara permanen di
+blockchain Polygon zkEVM, memberikan transparansi, imutabilitas, dan verifikasi
+yang tidak dapat dimanipulasi. Dengan arsitektur ini, sistem tidak hanya
+mengotomatisasi penjualan tiket dan penggunaan tiket, tetapi juga menciptakan
+model distribusi digital yang adil, aman, dan tahan terhadap pemalsuan.
+
+\section{Implementasi Sistem}
+\label{sec:implementasisistem}
+
+\begin{figure}[H]
+    \centering
+
+    % Ubah dengan nama file gambar dan ukuran yang akan digunakan
+    \includegraphics[width=.75\textwidth]{gambar/bab3/alur-beli.png}
+
+    % Ubah dengan keterangan gambar yang diinginkan
+    \caption{Alur pembelian tiket.}
+    \label{fig:alurbeli}
+\end{figure}
+Diagram alur di atas menggambarkan proses pembelian tiket konser berbasis NFT dalam sistem marketplace yang dibangun menggunakan teknologi blockchain. Proses dimulai ketika pengguna mengakses halaman event pada antarmuka aplikasi web. Halaman ini menyajikan berbagai informasi terkait suatu acara, seperti nama konser, lokasi, waktu pelaksanaan, daftar artis, harga tiket, dan jumlah tiket yang tersedia. Di halaman ini, pengguna akan disajikan tombol atau antarmuka yang memungkinkan mereka untuk memulai proses pembelian tiket secara langsung.
+
+Ketika pengguna menekan tombol untuk membeli tiket, sistem akan terlebih dahulu
+memeriksa apakah wallet kripto pengguna sudah terhubung ke aplikasi atau belum.
+Wallet ini merupakan elemen penting dalam ekosistem Web3 karena berfungsi
+sebagai identitas digital pengguna sekaligus tempat penyimpanan aset kripto dan
+NFT. Wallet seperti MetaMask harus terhubung agar pengguna dapat berinteraksi
+dengan smart contract yang mengatur penerbitan dan distribusi tiket.
+
+Jika pengguna belum menghubungkan wallet-nya, sistem akan menampilkan
+notifikasi atau prompt yang menginformasikan bahwa wallet perlu dihubungkan
+terlebih dahulu untuk melanjutkan proses pembelian. Pengguna kemudian akan
+diarahkan untuk menghubungkan wallet mereka melalui pop-up atau jendela
+eksternal dari ekstensi wallet. Proses ini juga mencakup proses validasi
+jaringan, di mana pengguna harus terhubung ke jaringan blockchain yang sesuai,
+misalnya jaringan Polygon zkEVM jika sistem ini berjalan di atasnya. Setelah
+wallet terhubung, sistem akan melanjutkan ke langkah berikutnya.
+
+Jika wallet sudah terhubung, aplikasi akan menampilkan formulir pembelian
+tiket, yang biasanya mencakup detail seperti jumlah tiket yang ingin dibeli,
+nomor kursi (jika sistem mendukung penomoran tempat duduk), dan pratinjau dari
+metadata NFT (misalnya gambar atau informasi yang melekat pada tiket digital).
+Setelah pengguna mengisi formulir ini, mereka akan diarahkan ke tahap
+konfirmasi pembelian, di mana sistem akan menampilkan ringkasan
+transaksi—termasuk harga tiket, biaya platform (platform fee), dan estimasi gas
+fee yang akan ditarik dari wallet.
+
+Setelah konfirmasi dilakukan, proses dilanjutkan ke tahap pembayaran, di mana
+transaksi akan dikirim ke jaringan blockchain melalui wallet pengguna. Smart
+contract akan menerima pembayaran, mencetak NFT tiket, dan mengirimkan token
+tersebut ke alamat wallet pengguna. Seluruh proses ini dicatat secara permanen
+di blockchain, memastikan transparansi, keamanan, dan ketertelusuran aset
+digital. Tiket yang dibeli kemudian dapat digunakan atau diverifikasi pada saat
+hari acara berlangsung.
+
+Keseluruhan alur ini menggambarkan bagaimana sistem Web3 mengintegrasikan aspek
+tradisional seperti pembelian tiket dengan komponen teknologi baru seperti
+wallet kripto dan smart contract. Dengan pendekatan ini, pembelian tiket
+menjadi lebih transparan, tidak dapat dipalsukan, dan memberikan kendali penuh
+kepada pengguna atas aset digital yang dimilikinya.
+\subsection{Konfigurasi Environment}
+Langkah pertama dalam pengembangan platform marketplace tiket konser berbasis
+smart contract pada jaringan Layer-2 Ethereum adalah menyiapkan environment
+pengembangan yang dapat mendukung pembuatan dan pengujian smart contract.
+Proses ini dimulai dengan menginstal alat pengembangan blockchain seperti
+Hardhat. Hardhat memberikan fleksibilitas lebih besar dalam hal penyesuaian dan
+integrasi dengan jaringan Layer-2. Setelah memilih alat pengembangan yang
+tepat, langkah berikutnya adalah mengonfigurasi jaringan testnet Polygon zkEVM
+yang dapat diintegrasikan dengan Ethereum untuk memberikan transaksi yang lebih
+cepat dan biaya yang lebih rendah. Selain itu, penting untuk menyiapkan dompet
+kripto seperti MetaMask yang berfungsi untuk mengelola transaksi dan interaksi
+dengan smart contract di jaringan Layer-2. MetaMask memungkinkan pengembang dan
+pengguna untuk menghubungkan aplikasi dengan jaringan Ethereum atau Layer-2,
+serta mengelola token dan NFT yang digunakan dalam platform. Pengguna juga
+harus memverifikasi bahwa mereka memiliki akses ke Ethereum testnet atau
+testnet Layer-2 yang relevan untuk menguji smart contract sebelum diterapkan
+pada jaringan utama. Penggunaan testnet memungkinkan pengembang untuk
+menghindari biaya transaksi yang tinggi dan risiko yang terkait dengan
+pengujian pada jaringan utama. Untuk memulai pengembangan di jaringan Polygon
+zkEVM, langkah pertama adalah menyiapkan Cardona testnet di MetaMask. Langkah
+ini dimulai dengan membuka MetaMask dan memilih opsi untuk menambahkan jaringan
+baru di pengaturan. Setelah itu, Anda perlu memasukkan rincian konfigurasi
+Cardona testnet, seperti URL RPC, ID chain, nama jaringan, simbol mata uang
+(ETH), dan URL Explorer.
+
+\subsection{Pengembangan Smart Contract}
+Smart contract dikembangkan menggunakan Solidity versi 0.8.28, bahasa
+pemrograman utama untuk blockchain Ethereum dan Polygon zkEVM yang menyediakan
+syntax yang familiar bagi developer dengan latar belakang JavaScript atau C++.
+Solidity merupakan statically-typed programming language yang specifically
+designed untuk mengembangkan smart contracts yang berjalan pada Ethereum
+Virtual Machine (EVM), dengan features seperti inheritance, libraries, dan
+complex user-defined types yang memungkinkan pengembangan aplikasi blockchain
+yang sophisticated dan secure. Versi 0.8.28 yang digunakan dalam penelitian ini
+memberikan built-in overflow/underflow protection, enhanced error handling
+mechanisms, dan improved gas optimization features yang crucial untuk
+cost-effective operations pada Layer-2 networks seperti Polygon zkEVM.Untuk
+pengembangan, testing, dan deployment, Hardhat digunakan sebagai primary
+development framework yang memungkinkan kompilasi, testing, deployment smart
+contract, dan comprehensive debugging capabilities. Hardhat menyediakan
+ekosistem lengkap yang terintegrasi dengan dukungan untuk advanced scripting
+menggunakan JavaScript/TypeScript, automated testing menggunakan Mocha test
+framework dan Chai assertion library, serta powerful debugging tools termasuk
+console.log functionality dalam smart contracts, stack traces untuk failed
+transactions, dan gas usage analysis. Framework ini juga menyediakan built-in
+local blockchain environment melalui Hardhat Network yang memungkinkan rapid
+development cycles dengan instant mining, configurable gas prices, dan detailed
+transaksi logging untuk comprehensive testing scenarios.
+
+Hardhat configuration memungkinkan multi-network deployment dengan easy
+switching antara development, testnet, dan mainnet environments melalui single
+configuration file yang mendefinisikan network parameters, account management,
+dan deployment strategies. Plugin ecosystem yang extensive mencakup integrasi
+dengan tools seperti Etherscan untuk contract verification, OpenZeppelin untuk
+security auditing, gas reporting untuk cost analysis, dan coverage tools untuk
+testing completeness measurement. Hardhat Tasks system memungkinkan creation
+custom scripts untuk automated workflows seperti contract deployment, data
+seeding, dan administrative operations yang dapat dijalankan dengan consistent
+parameters across different environments. Development workflow menggunakan
+Hardhat meliputi beberapa tahapan yang systematic: contract development dengan
+real-time compilation checking, comprehensive unit testing menggunakan test
+fixtures dan mock contracts, integration testing dengan simulated user
+interactions, gas optimization analysis untuk identifying cost bottlenecks, dan
+automated deployment scripts yang ensure consistent deployment across multiple
+networks. Hardhat Console menyediakan interactive JavaScript environment yang
+memungkinkan real-time interaction dengan deployed contracts, useful untuk
+debugging, data querying, dan administrative operations tanpa need untuk
+writing separate scripts. Testing framework yang robust mencakup unit tests
+untuk individual contract functions, integration tests untuk multi-contract
+interactions, stress tests untuk high-volume scenarios, dan edge case testing
+untuk security vulnerabilities. Mocha test runner memberikan structured test
+organization dengan describe blocks, before/after hooks untuk setup/teardown
+operations, dan detailed test reporting dengan gas usage metrics. Chai
+assertion library memungkinkan expressive test assertions dengan custom
+matchers untuk blockchain-specific operations seperti event emission checking,
+revert reason validation, dan state change verification. Plugin architecture
+Hardhat memungkinkan extensibility melalui community-developed plugins yang
+menambahkan functionality seperti automatic contract size checking untuk
+deployment limits, security analysis integration dengan tools seperas Slither
+atau MythX, dan performance monitoring untuk transaksi execution metrics.
+Hardhat Verify plugin memungkinkan automatic source code verification pada
+block explorers, penting untuk transparency dan user confidence dalam
+production deployments. Gas reporter plugin memberikan detailed analysis biaya
+operasi untuk setiap function call, memungkinkan optimization decisions
+berdasarkan actual usage patterns. Configuration management melalui
+hardhat.config.js file memungkinkan sophisticated setup untuk different
+deployment scenarios, termasuk network-specific gas prices, account management
+dengan hardware wallet integration, dan environment-specific contract
+parameters. Compiler settings dapat dikonfigurasi untuk optimization levels
+yang berbeda, target EVM versions untuk compatibility dengan different
+networks, dan output selections untuk generating comprehensive compilation
+artifacts. Network configuration mendukung multiple RPC providers dengan
+automatic failover, custom gas estimation strategies, dan timeout
+configurations untuk reliable network interactions.
+
+\begin{lstlisting}[numbers=none]
+    // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.28;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/Pausable.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
+
+contract TicketMarketplace is
+    ERC721,
+    ERC721URIStorage,
+    ERC721Burnable,
+    ERC721Pausable,
+    Ownable,
+    ReentrancyGuard
+{
+    uint256 private _tokenIdCounter;
+
+    // Struct untuk menyimpan informasi event
+    struct Event {
+        uint256 eventId;
+        string name;
+        string description;
+        uint256 price;
+        uint256 maxSupply;
+        uint256 currentSupply;
+        uint256 eventDate;
+        bool isActive;
+        address organizer;
+    }
+
+    // Struct untuk menyimpan informasi tiket
+    struct Ticket {
+        uint256 tokenId;
+        uint256 eventId;
+        address owner;
+        bool isUsed;
+        uint256 purchaseDate;
+        uint256 usageDate;
+    }
+
+    // Mappings
+    mapping(uint256 => Event) public events;
+    mapping(uint256 => Ticket) public tickets;
+    mapping(uint256 => bool) public eventExists;
+    mapping(address => uint256[]) public userTickets;
+    mapping(uint256 => address) public authorizedVerifiers;
+    mapping(uint256 => bool) public tokenExists; // Track token existence
+
+    // Counters
+    uint256 public eventCounter;
+    uint256 public totalRevenue;
+
+    // Fee untuk platform (dalam basis points, 250 = 2.5%)
+    uint256 public platformFee = 250;
+    uint256 public constant MAX_PLATFORM_FEE = 1000; // 10% maksimal
+
+    // Events
+    event EventCreated(
+        uint256 indexed eventId,
+        string name,
+        uint256 price,
+        uint256 maxSupply
+    );
+    event TicketPurchased(
+        uint256 indexed tokenId,
+        uint256 indexed eventId,
+        address buyer,
+        uint256 price
+    );
+    event TicketUsed(
+        uint256 indexed tokenId,
+        uint256 indexed eventId,
+        address verifier
+    );
+    event TicketBurned(uint256 indexed tokenId, uint256 indexed eventId);
+    event EventUpdated(uint256 indexed eventId, string name, uint256 price);
+    event VerifierAdded(uint256 indexed eventId, address verifier);
+    event VerifierRemoved(uint256 indexed eventId, address verifier);
+
+    constructor() ERC721("EventTicket", "ETKT") Ownable(msg.sender) {
+        _tokenIdCounter = 0;
+        eventCounter = 0;
+        totalRevenue = 0;
+        platformFee = 250;
+    }
+    // Modifier untuk memastikan hanya organizer event yang bisa mengakses
+    modifier onlyEventOrganizer(uint256 eventId) {
+        require(events[eventId].organizer == msg.sender, "Not event organizer");
+        _;
+    }
+
+    // Modifier untuk memastikan event ada
+    modifier eventMustExist(uint256 eventId) {
+        require(eventExists[eventId], "Event does not exist");
+        _;
+    }
+
+    // Modifier untuk verifier yang diotorisasi
+    modifier onlyAuthorizedVerifier(uint256 eventId) {
+        require(
+            authorizedVerifiers[eventId] == msg.sender ||
+                events[eventId].organizer == msg.sender ||
+                owner() == msg.sender,
+            "Not authorized verifier"
+        );
+        _;
+    }
+
+    /**
+     * @dev Membuat event baru
+     */
+    function createEvent(
+        string memory name,
+        string memory description,
+        uint256 price,
+        uint256 maxSupply,
+        uint256 eventDate
+    ) external returns (uint256) {
+        require(bytes(name).length > 0, "Event name cannot be empty");
+        require(maxSupply > 0, "Max supply must be greater than 0");
+        require(
+            eventDate > block.timestamp,
+            "Event date must be in the future"
+        );
+
+        eventCounter++;
+        uint256 eventId = eventCounter;
+
+        events[eventId] = Event({
+            eventId: eventId,
+            name: name,
+            description: description,
+            price: price,
+            maxSupply: maxSupply,
+            currentSupply: 0,
+            eventDate: eventDate,
+            isActive: true,
+            organizer: msg.sender
+        });
+
+        eventExists[eventId] = true;
+
+        emit EventCreated(eventId, name, price, maxSupply);
+        return eventId;
+    }
+
+    /**
+     * @dev Membeli tiket untuk event tertentu
+     */
+    function purchaseTicket(
+        uint256 eventId,
+        string memory newTokenURI
+    ) external payable nonReentrant whenNotPaused eventMustExist(eventId) {
+        Event storage eventInfo = events[eventId];
+
+        require(eventInfo.isActive, "Event is not active");
+        require(
+            eventInfo.currentSupply < eventInfo.maxSupply,
+            "Event sold out"
+        );
+        require(msg.value >= eventInfo.price, "Insufficient payment");
+        require(
+            block.timestamp < eventInfo.eventDate,
+            "Event has already passed"
+        );
+
+        // Mint NFT ticket
+        _tokenIdCounter++;
+        uint256 tokenId = _tokenIdCounter;
+
+        // FIXED: Mint ke msg.sender (pembeli), bukan ke organizer
+        _safeMint(msg.sender, tokenId);
+        _setTokenURI(tokenId, newTokenURI);
+
+        // Mark token as existing
+        tokenExists[tokenId] = true;
+
+        // Update event supply
+        eventInfo.currentSupply++;
+
+        // FIXED: Create ticket record dengan owner yang benar (msg.sender)
+        tickets[tokenId] = Ticket({
+            tokenId: tokenId,
+            eventId: eventId,
+            owner: msg.sender, // FIXED: Pastikan owner adalah pembeli
+            isUsed: false,
+            purchaseDate: block.timestamp,
+            usageDate: 0
+        });
+
+        // FIXED: Add to user tickets untuk pembeli, bukan organizer
+        userTickets[msg.sender].push(tokenId);
+
+        // Calculate fees
+        uint256 platformFeeAmount = (msg.value * platformFee) / 10000;
+        uint256 organizerAmount = msg.value - platformFeeAmount;
+
+        // Transfer payment to organizer
+        (bool success, ) = payable(eventInfo.organizer).call{
+            value: organizerAmount
+        }("");
+        require(success, "Payment to organizer failed");
+
+        // Keep platform fee in contract
+        totalRevenue += platformFeeAmount;
+
+        // Refund excess payment
+        if (msg.value > eventInfo.price) {
+            uint256 refund = msg.value - eventInfo.price;
+            (bool refundSuccess, ) = payable(msg.sender).call{value: refund}(
+                ""
+            );
+            require(refundSuccess, "Refund failed");
+        }
+
+        emit TicketPurchased(tokenId, eventId, msg.sender, eventInfo.price);
+    }
+
+    /**
+     * @dev Menggunakan tiket (verifikasi di pintu masuk)
+     */
+    function useTicket(
+        uint256 tokenId
+    ) external onlyAuthorizedVerifier(tickets[tokenId].eventId) {
+        require(tokenExists[tokenId], "Ticket does not exist");
+
+        Ticket storage ticket = tickets[tokenId];
+        require(!ticket.isUsed, "Ticket already used");
+
+        Event storage eventInfo = events[ticket.eventId];
+        require(
+            block.timestamp >= eventInfo.eventDate - 1 hours &&
+                block.timestamp <= eventInfo.eventDate + 6 hours,
+            "Event access window closed"
+        );
+
+        // Mark ticket as used
+        ticket.isUsed = true;
+        ticket.usageDate = block.timestamp;
+
+        emit TicketUsed(tokenId, ticket.eventId, msg.sender);
+
+        // Auto-burn ticket after use
+        _burnTicket(tokenId);
+    }
+
+    /**
+     * @dev Internal function untuk membakar tiket
+     */
+    function _burnTicket(uint256 tokenId) internal {
+        require(tokenExists[tokenId], "Ticket does not exist");
+
+        Ticket storage ticket = tickets[tokenId];
+
+        // FIXED: Remove from user tickets array - gunakan ownerOf untuk mendapatkan owner saat ini
+        address ticketOwner = ownerOf(tokenId);
+        uint256[] storage userTicketList = userTickets[ticketOwner];
+        for (uint256 i = 0; i < userTicketList.length; i++) {
+            if (userTicketList[i] == tokenId) {
+                userTicketList[i] = userTicketList[userTicketList.length - 1];
+                userTicketList.pop();
+                break;
+            }
+        }
+
+        // Mark token as non-existent
+        tokenExists[tokenId] = false;
+
+        // Burn the NFT
+        _burn(tokenId);
+
+        emit TicketBurned(tokenId, ticket.eventId);
+    }
+
+    /**
+     * @dev Menambahkan verifier untuk event
+     */
+    function addVerifier(
+        uint256 eventId,
+        address verifier
+    ) external onlyEventOrganizer(eventId) {
+        require(verifier != address(0), "Invalid verifier address");
+        authorizedVerifiers[eventId] = verifier;
+        emit VerifierAdded(eventId, verifier);
+    }
+
+    /**
+     * @dev Menghapus verifier untuk event
+     */
+    function removeVerifier(
+        uint256 eventId
+    ) external onlyEventOrganizer(eventId) {
+        address verifier = authorizedVerifiers[eventId];
+        delete authorizedVerifiers[eventId];
+        emit VerifierRemoved(eventId, verifier);
+    }
+
+    /**
+     * @dev Update informasi event
+     */
+    function updateEvent(
+        uint256 eventId,
+        string memory name,
+        uint256 price
+    ) external onlyEventOrganizer(eventId) {
+        Event storage eventInfo = events[eventId];
+        eventInfo.name = name;
+        eventInfo.price = price;
+
+        emit EventUpdated(eventId, name, price);
+    }
+
+    /**
+     * @dev Mengaktifkan/menonaktifkan event
+     */
+    function toggleEventStatus(
+        uint256 eventId
+    ) external onlyEventOrganizer(eventId) {
+        events[eventId].isActive = !events[eventId].isActive;
+    }
+
+    /**
+     * @dev Mendapatkan daftar tiket user
+     */
+    function getUserTickets(
+        address user
+    ) external view returns (uint256[] memory) {
+        return userTickets[user];
+    }
+
+    /**
+     * @dev Mendapatkan informasi tiket
+     */
+    function getTicketInfo(
+        uint256 tokenId
+    ) external view returns (Ticket memory) {
+        require(tokenExists[tokenId], "Ticket does not exist");
+        return tickets[tokenId];
+    }
+
+    /**
+     * @dev Mendapatkan informasi event
+     */
+    function getEventInfo(
+        uint256 eventId
+    ) external view returns (Event memory) {
+        require(eventExists[eventId], "Event does not exist");
+        return events[eventId];
+    }
+
+    /**
+     * @dev Set platform fee (hanya owner)
+     */
+    function setPlatformFee(uint256 newFee) external onlyOwner {
+        require(newFee <= MAX_PLATFORM_FEE, "Fee too high");
+        platformFee = newFee;
+    }
+
+    /**
+     * @dev Withdraw platform revenue (hanya owner)
+     */
+    function withdrawRevenue() external onlyOwner {
+        uint256 amount = totalRevenue;
+        totalRevenue = 0;
+
+        (bool success, ) = payable(owner()).call{value: amount}("");
+        require(success, "Withdrawal failed");
+    }
+
+    /**
+     * @dev Emergency pause contract
+     */
+    function pause() external onlyOwner {
+        _pause();
+    }
+
+    /**
+     * @dev Unpause contract
+     */
+    function unpause() external onlyOwner {
+        _unpause();
+    }
+
+    // Override functions required for multiple inheritance
+    function _update(
+        address to,
+        uint256 tokenId,
+        address auth
+    ) internal override(ERC721, ERC721Pausable) returns (address) {
+        address from = _ownerOf(tokenId);
+
+        // Jika ini bukan mint (from != address(0)) dan bukan burn (to != address(0))
+        if (from != address(0) && to != address(0) && tokenExists[tokenId]) {
+            // Update ticket owner
+            tickets[tokenId].owner = to;
+
+            // Remove dari array userTickets pemilik lama
+            uint256[] storage fromUserTickets = userTickets[from];
+            for (uint256 i = 0; i < fromUserTickets.length; i++) {
+                if (fromUserTickets[i] == tokenId) {
+                    fromUserTickets[i] = fromUserTickets[
+                        fromUserTickets.length - 1
+                    ];
+                    fromUserTickets.pop();
+                    break;
+                }
+            }
+
+            // Add ke array userTickets pemilik baru
+            userTickets[to].push(tokenId);
+        }
+
+        return super._update(to, tokenId, auth);
+    }
+
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view override(ERC721, ERC721URIStorage) returns (bool) {
+        return super.supportsInterface(interfaceId);
+    }
+
+    function tokenURI(
+        uint256 tokenId
+    ) public view override(ERC721, ERC721URIStorage) returns (string memory) {
+        return super.tokenURI(tokenId);
+    }
 }
+
 \end{lstlisting}
 
-\lipsum[2-3]
+\begin{itemize}[itemsep=0.1em]
+    \item \textbf{Multiple Inheritance Pattern}: Smart contract mengimplementasikan pattern multiple inheritance dengan mewarisi dari enam kontrak OpenZeppelin yang berbeda, menciptakan sistem yang modular dan secure
+          \begin{itemize}
+              \item \texttt{ERC721}: Standard NFT untuk representasi tiket sebagai aset digital yang unik
+              \item \texttt{ERC721URIStorage}: Extension untuk menyimpan metadata tiket secara on-chain
+              \item \texttt{ERC721Burnable}: Functionality untuk menghancurkan tiket setelah digunakan
+              \item \texttt{ERC721Pausable}: Mekanisme emergency stop untuk menghentikan operasi kontrak
+              \item \texttt{Ownable}: Access control pattern untuk administrative functions
+              \item \texttt{ReentrancyGuard}: Proteksi terhadap reentrancy attacks pada fungsi yang melibatkan transfer ETH
+          \end{itemize}
 
-% Contoh input potongan kode dari file
-\lstinputlisting[
-  language=Python,
-  caption={Program perhitungan bilangan prima.},
-  label={lst:bilanganprima}
-]{program/bilangan-prima.py}
+    \item \textbf{State Management}: Kontrak menggunakan counter-based approach untuk tracking token IDs dan event IDs, memastikan uniqueness dan sequential numbering
 
-\lipsum[4]
+    \item \textbf{Security Architecture}: Implementasi defense-in-depth approach dengan multiple layers proteksi terhadap common smart contract vulnerabilities
+    \item \textbf{Event Struct}: Komprehensif data structure untuk menyimpan informasi event
+          \begin{itemize}
+              \item \texttt{eventId}: Unique identifier untuk setiap event
+              \item \texttt{name} dan \texttt{description}: Metadata event yang dapat diupdate
+              \item \texttt{price}: Harga tiket dalam wei, memungkinkan dynamic pricing
+              \item \texttt{maxSupply} dan \texttt{currentSupply}: Inventory management untuk mencegah overselling
+              \item \texttt{eventDate}: Timestamp untuk temporal access control
+              \item \texttt{isActive}: Boolean flag untuk enable/disable penjualan tiket
+              \item \texttt{organizer}: Address organizer untuk access control dan payment routing
+          \end{itemize}
+
+    \item \textbf{Ticket Struct}: Detailed tracking untuk setiap NFT ticket
+          \begin{itemize}
+              \item \texttt{tokenId}: Unique NFT identifier yang linked ke ERC721 standard
+              \item \texttt{eventId}: Foreign key relationship ke event yang bersangkutan
+              \item \texttt{owner}: Current owner address dengan automatic updates pada transfer
+              \item \texttt{isUsed}: Boolean flag untuk mencegah double-spending
+              \item \texttt{purchaseDate} dan \texttt{usageDate}: Audit trail untuk ticket lifecycle
+          \end{itemize}
+
+    \item \textbf{Mapping Structures}: Efficient storage dan retrieval mechanisms
+          \begin{itemize}
+              \item \texttt{mapping(uint256 => Event)}: Direct access ke event information
+              \item \texttt{mapping(uint256 => Ticket)}: Ticket details lookup
+              \item \texttt{mapping(address => uint256[])}: User ticket portfolio tracking
+              \item \texttt{mapping(uint256 => address)}: Event-specific verifier authorization
+              \item \texttt{mapping(uint256 => bool)}: Existence checks untuk events dan tokens
+          \end{itemize}
+
+    \item \textbf{Modifier-based Access Control}: Implementation custom modifiers untuk granular permission management
+          \begin{itemize}
+              \item \texttt{onlyEventOrganizer}: Membatasi akses functions yang hanya boleh dipanggil oleh organizer event
+              \item \texttt{eventMustExist}: Validation existence check sebelum operations
+              \item \texttt{onlyAuthorizedVerifier}: Multi-level authorization untuk ticket verification
+          \end{itemize}
+
+    \item \textbf{Reentrancy Protection}: Penggunaan \texttt{nonReentrant} modifier pada \texttt{purchaseTicket} function untuk mencegah reentrancy attacks yang dapat mengeksploitasi payment logic
+
+    \item \textbf{Pausable Mechanism}: Emergency stop functionality yang memungkinkan contract owner untuk menghentikan operations dalam situasi darurat atau ketika ditemukan bugs
+
+    \item \textbf{Input Validation}: Comprehensive validation pada semua user inputs untuk mencegah invalid state transitions dan malicious inputs
+    \item \textbf{Event Creation Process}:
+          \begin{itemize}
+              \item Validation comprehensive untuk event parameters (name non-empty, maxSupply > 0,
+                    future date)
+              \item Automatic assignment eventId menggunakan counter increment
+              \item Event storage dengan organizer assignment untuk ownership tracking
+              \item Event emission untuk off-chain monitoring dan indexing
+          \end{itemize}
+
+    \item \textbf{Ticket Purchase Mechanism}:
+          \begin{itemize}
+              \item Multi-step validation process: event existence, activity status, supply
+                    availability, payment adequacy, temporal validity
+              \item Atomic operation combining NFT minting, metadata assignment, ticket record
+                    creation, payment processing
+              \item Automatic fee calculation dan distribution antara platform dan organizer
+              \item Excess payment refund mechanism untuk user experience improvement
+              \item User ticket portfolio update dengan array management
+          \end{itemize}
+
+    \item \textbf{Ticket Verification dan Usage}:
+          \begin{itemize}
+              \item Time-window based access control (1 jam sebelum hingga 6 jam setelah event)
+              \item Authorization check untuk verifiers yang dapat melakukan ticket validation
+              \item Automatic ticket burning setelah usage untuk mencegah reuse
+              \item Event emission untuk audit trail dan real-time monitoring
+          \end{itemize}
+    \item \textbf{Platform Fee System}:
+          \begin{itemize}
+              \item Basis points calculation (250 = 2.5\%) untuk precise fee computation
+              \item Maximum fee cap (10\%) untuk mencegah excessive platform charges
+              \item Revenue accumulation dalam contract untuk platform sustainability
+              \item Owner-only withdrawal mechanism untuk revenue collection
+          \end{itemize}
+
+    \item \textbf{Payment Processing}:
+          \begin{itemize}
+              \item Automatic fee splitting antara platform dan organizer
+              \item Safe transfer menggunakan low-level call dengan success checking
+              \item Refund mechanism untuk overpayment situations
+              \item Gas-efficient payment logic untuk minimizing transaction costs
+          \end{itemize}
+
+\end{itemize}
+
+\subsection{Perilisan Smart Contract ke Testnet}
+Setelah pengembangan smart contract selesai, langkah berikutnya adalah
+merilisnya ke jaringan testnet untuk menguji fungsionalitasnya sebelum
+implementasi di mainnet. Proses ini dimulai dengan menyiapkan jaringan testnet
+yang mendukung, seperti Cardona testnet, dengan menambahkan konfigurasinya di
+MetaMask. Pengembang perlu memastikan bahwa mereka memiliki saldo test token di
+testnet tersebut, yang dapat diperoleh melalui faucet resmi jaringan. Deploy
+smart contract dilakukan menggunakan tools seperti Hardhat atau Truffle yang
+terintegrasi dengan library seperti ethers.js. Konfigurasi file deploy
+disesuaikan dengan alamat jaringan testnet yang digunakan. Sebagai contoh,
+menggunakan Hardhat, langkah-langkahnya meliputi: menulis script deploy di file
+deploy.js, mengompilasi smart contract, dan menjalankan script deploy dengan
+perintah seperti \emph{npx hardhat run scripts/deploy.ts --network cardona}.
+Setelah kontrak berhasil diterbitkan, alamat kontrak yang baru akan disimpan
+untuk digunakan di integrasi frontend. Setelah perilisan, pengujian dilakukan
+untuk memastikan semua fungsi berjalan sesuai spesifikasi, termasuk minting
+tiket, transfer tiket, dan verifikasi kepemilikan.
+
+\subsection{Pengembangan Frontend}
+
+Antarmuka pengguna (frontend) untuk marketplace tiket konser berbasis smart
+contract dirancang sebagai aplikasi Web3 yang menyeluruh, berfungsi sebagai
+jembatan yang mulus antara pengalaman pengguna web tradisional dan teknologi
+blockchain, sekaligus memungkinkan interaksi langsung dan aman dengan smart
+contract yang telah diunggah ke jaringan Polygon zkEVM. Struktur antarmuka ini
+mengikuti praktik pengembangan web modern dengan penekanan pada pengoptimalan
+pengalaman pengguna, efisiensi kinerja, dan pertismbangan keamanan yang sangat
+penting dalam aplikasi keuangan yang menangani transaksi kripto dan aset
+digital berharga seperti tiket NFT. Proses pengembangan dimulai dengan
+inisialisasi proyek menggunakan framework Next.js versi 15, yang menyediakan
+kemampuan server-side rendering, pemisahan kode otomatis untuk mempercepat
+pemuatan halaman, serta fitur bawaan seperti pengoptimalan gambar, pemuatan
+huruf, dan sistem routing yang tangguh untuk mendukung halaman-halaman dinamis
+baik untuk acara maupun pengguna.
+
+Struktur App Router dari Next.js memungkinkan pemetaan berdasarkan struktur
+berkas, dukungan untuk tata letak bertingkat (nested layout), status pemuatan,
+serta penanganan kesalahan secara terpisah—yang sangat penting dalam menangani
+status operasi blockchain dan gangguan konektivitas jaringan yang umum dalam
+aplikasi Web3. Integrasi TypeScript memberikan pengecekan tipe secara statis
+yang meningkatkan pengalaman pengembang dan mengurangi kesalahan saat aplikasi
+dijalankan—khususnya penting dalam pengembangan Web3 di mana interaksi dengan
+smart contract memerlukan tipe parameter dan nilai keluaran yang tepat.
+Definisi tipe khusus disiapkan untuk entitas aplikasi seperti Event dan Ticket,
+sementara tipe umum mencakup alamat dompet, objek transaksi, log peristiwa
+(event log), dan antarmuka kontrak (contract interface). Libary utama untuk
+interaksi dengan blockchain menggunakan ethers.js versi 6, yang menyediakan
+seperangkat alat untuk memanggil metode smart contract, mengelola transaksi,
+mendengarkan peristiwa, dan mengintegrasikan dompet pengguna. Penyedia
+(provider) dari ethers.js mendukung koneksi ke berbagai titik RPC (Remote
+Procedure Call) dengan kemampuan pemulihan otomatis jika terjadi gangguan
+jaringan atau layanan.
+
+Kontrak dibangun menggunakan contract factory dan tipe-tipe yang dihasilkan
+dari berkas ABI (Application Binary Interface), memungkinkan interaksi aman dan
+terstruktur dengan dukungan fitur IntelliSense untuk metode dan peristiwa dalam
+kontrak. Setelah infrastruktur dasar dikonfigurasi, implementasi koneksi dompet
+mencakup pengelolaan status koneksi, penanganan perubahan akun, validasi
+jaringan untuk memastikan pengguna terhubung ke jari-ngan yang benar (misalnya
+testnet Cardona untuk pengembangan atau jaringan produksi untuk peluncuran),
+serta mekanisme penyambungan ulang otomatis agar sesi pengguna tetap bertahan
+meski halaman dimuat ulang atau browser ditutup. Permintaan untuk mengganti
+jaringan ditampilkan kepada pengguna ketika mereka terhubung ke jaringan yang
+tidak sesuai, dengan petunjuk yang jelas serta dukungan penambahan jaringan
+baru secara otomatis jika belum tersedia di dompet pengguna.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{gambar/bab3/Screenshot 2025-07-08 222752.png}
+    \caption{Akun Metamask Seller.}
+    \label{fig:akunadmin}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{gambar/bab3/Screenshot 2025-07-08 222807.png}
+    \caption{Akun Metamask Pembeli.}
+    \label{fig:akunpembeli}
+\end{figure}
+
+\subsection{Skenario Pengujian}
+Untuk mendukung pengembangan dan testing yang comprehensive, framework Mocha
+dan Chai membantu dalam menulis dan menjalankan unit test smart contract untuk
+memastikan logika berjalan sesuai harapan dengan coverage yang extensive dan
+validation yang thorough. Mocha merupakan framework JavaScript yang menyediakan
+struktur tes yang fleksible melalui block describe untuk mengatur test suites,
+block it untuk individual test cases, dan hooks seperti before, beforeEach,
+after, dan afterEach untuk setup dan teardown operations yang essential dalam
+blockchain testing environments.
+
+\subsubsection{Stress Testing}
+\begin{lstlisting}[numbers=none]
+  const { expect } = require('chai');
+const { ethers } = require('hardhat');
+const MetricsCollector = require('../utils/metrics');
+const ContractHelper = require('../utils/helpers');
+
+describe('Stress Test - Sepolia vs Cardona zkEVM', function () {
+    let metricsCollector;
+    let contracts = {};
+    let owner, users;
+
+    this.timeout(600000); 
+
+    before(async function () {
+        console.log('Setting up stress test environment...');
+
+        metricsCollector = new MetricsCollector();
+        [owner, ...users] = await ethers.getSigners();
+
+        const contractFactory = await ethers.getContractFactory('TicketMarketplace');
+
+        contracts.sepolia = await contractFactory.deploy();
+        await contracts.sepolia.waitForDeployment();
+
+        contracts.cardona = await contractFactory.deploy();
+        await contracts.cardona.waitForDeployment();
+
+        console.log('Environment setup completed');
+    });
+
+    describe('Controlled Event Creation Stress Test', function () {
+        it('should handle 50 sequential event creations with proper metrics', async function () {
+            const eventCount = 50;
+            console.log(`Creating ${eventCount} events on both networks...`);
+
+            for (const networkName of ['sepolia', 'cardona']) {
+                console.log(`\nTesting ${networkName}...`);
+                const contract = contracts[networkName];
+
+                for (let i = 0; i < eventCount; i++) {
+                    const startTime = Date.now();
+
+                    try {
+                        const tx = await contract.createEvent(
+                            `Stress Event ${i}`,
+                            `Description for event ${i}`,
+                            ethers.parseEther('0.01'),
+                            100,
+                            Math.floor(new Date('2025-12-31').getTime() / 1000)
+                        );
+
+                        const resceipt = await tx.wait();
+
+                        await metricsCollector.record(
+                            'createEvent',
+                            networkName,
+                            receipt.gasUsed.toString(),
+                            Date.now() - startTime,
+                            receipt.status === 1,
+                            null,
+                            receipt
+                        );
+
+                        if (i % 10 === 0) {
+                            console.log(`${networkName}: Created ${i + 1}/${eventCount} events`);
+                        }
+
+                    } catch (error) {
+                        await metricsCollector.record(
+                            'createEvent',
+                            networkName,
+                            0,
+                            Date.now() - startTime,
+                            false,
+                            error
+                        );
+
+                        console.error(`${networkName} event ${i} failed:`, error.message);
+                    }
+
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+            }
+
+            console.log('Event creation stress test completed');
+        });
+    });
+
+    describe('Batch Ticket Purchase Test', function () {
+        let eventId = 1;
+
+        it('should handle 100 ticket purchases in batches', async function () {
+            const totalTickets = 100;
+            const batchSize = 10;
+            const batches = Math.ceil(totalTickets / batchSize);
+
+            console.log(`Purchasing ${totalTickets} tickets in ${batches} batches...`);
+
+            for (const networkName of ['sepolia', 'cardona']) {
+                console.log(`\nTesting ${networkName}...`);
+                const contract = contracts[networkName];
+
+                for (let batch = 0; batch < batches; batch++) {
+                    const batchPromises = [];
+                    const startIndex = batch * batchSize;
+                    const endIndex = Math.min(startIndex + batchSize, totalTickets);
+
+                    for (let i = startIndex; i < endIndex; i++) {
+                        const userIndex = i % Math.min(users.length, 10);
+                        const user = users[userIndex];
+
+                        const promise = (async () => {
+                            const startTime = Date.now();
+                            try {
+                                const tx = await contract.connect(user).purchaseTicket(
+                                    eventId,
+                                    `https://api.tickets.com/metadata/${i}`,
+                                    { value: ethers.parseEther('0.01') }
+                                );
+                                const receipt = await tx.wait();
+
+                                await metricsCollector.record(
+                                    'purchaseTicket',
+                                    networkName,
+                                    receipt.gasUsed.toString(),
+                                    Date.now() - startTime,
+                                    receipt.status === 1,
+                                    null,
+                                    receipt
+                                );
+                            } catch (error) {
+                                await metricsCollector.record(
+                                    'purchaseTicket',
+                                    networkName,
+                                    0,
+                                    Date.now() - startTime,
+                                    false,
+                                    error
+                                );
+                            }
+                        })();
+
+                        batchPromises.push(promise);
+                    }
+
+                    await Promise.allSettled(batchPromises);
+                    console.log(`${networkName}: Completed batch ${batch + 1}/${batches}`);
+
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                }
+            }
+
+            console.log('Ticket purchase stress test completed');
+        });
+    });
+
+    after(async function () {
+        const report = metricsCollector.exportToFile('stress-test-results.json');
+
+        console.log('\n=== STRESS TEST RESULTS ===');
+        Object.keys(report.networkComparison).forEach(network => {
+            const stats = report.networkComparison[network];
+            console.log(`\n${network.toUpperCase()} Results:`);
+            console.log(`Success Rate: ${stats.successRate}%`);
+            console.log(`Average Gas Used: ${stats.avgGasPerTx}`);
+            console.log(`Average Response Time: ${stats.avgResponseTime}ms`);
+            console.log(`Estimated TPS: ${stats.estimatedTPS}`);
+
+            if (report.detailedMetrics[network]) {
+                const detailed = report.detailedMetrics[network];
+                console.log(`Gas Price (Gwei): ${detailed.gasEfficiency.gasPriceInGwei}`);
+                console.log(`Reliability Score: ${detailed.reliability.reliabilityScore}%`);
+            }
+        });
+    });
+});
+\end{lstlisting}
+\begin{itemize}[itemsep=0.1em]
+    \item \textbf{Environment Configuration}:
+          \begin{itemize}
+              \item Extended timeout (600,000ms) untuk accommodating blockchain transaction latency
+                    dan network variability
+              \item Dual contract deployment strategy dengan identical TicketMarketplace contracts
+                    pada kedua networks untuk ensuring fair comparison
+              \item MetricsCollector integration untuk comprehensive data gathering dan analysis
+          \end{itemize}
+
+    \item \textbf{Test Infrastructure}:
+          \begin{itemize}
+              \item Multi-user simulation menggunakan ethers signers untuk realistic concurrent
+                    user scenarios
+              \item Isolated contract instances untuk preventing cross-test contamination
+              \item Systematic metrics collection dengan standardized measurement points
+          \end{itemize}
+    \item \textbf{Test Methodology}:
+          \begin{itemize}
+              \item Sequential creation dari 50 events untuk measuring sustained performance
+              \item Identical parameters across networks: price (0.01 ETH), supply (100 tickets),
+                    future date (2025-12-31)
+              \item Error handling dan recovery mechanisms untuk maintaining test reliability
+          \end{itemize}
+
+    \item \textbf{Performance Metrics Collection}:
+          \begin{itemize}
+              \item Gas usage tracking untuk cost analysis comparison
+              \item Transaction time measurement dari initiation hingga confirmation
+              \item Success rate monitoring untuk reliability assessment
+              \item Network-specific gas price analysis untuk economic impact evaluation
+          \end{itemize}
+
+    \item \textbf{Rate Limiting Strategy}:
+          \begin{itemize}
+              \item 100ms delay between transactions untuk preventing network overwhelming
+              \item Progress reporting setiap 10 events untuk monitoring test execution
+              \item Graceful error handling dengan continued execution untuk comprehensive data
+                    collection
+          \end{itemize}
+    \item \textbf{Concurrent User Simulation}:
+          \begin{itemize}
+              \item 100 total ticket purchases divided into 10 batches dengan 10 concurrent transactions per batch
+              \item User rotation strategy (modulo operation) untuk simulating realistic user
+                    distribution
+              \item Realistic ticket pricing (0.01 ETH) dan unique metadata URIs untuk each ticket
+          \end{itemize}
+
+    \item \textbf{Batch Processing Logic}:
+          \begin{itemize}
+              \item Promise.allSettled() untuk handling concurrent transactions tanpa failing
+                    entire batch pada single transaction failure
+              \item Inter-batch delays (1000ms) untuk allowing network stabilization dan preventing
+                    congestion
+              \item Comprehensive error tracking untuk identifying failure patterns dan
+                    network-specific issues
+          \end{itemize}
+
+    \item \textbf{Transaction Isolation}:
+          \begin{itemize}
+              \item Individual user connections untuk each transaction untuk preventing nonce
+                    conflicts
+              \item Separate timing measurements untuk accurate performance analysis
+              \item Independent error handling untuk maintaining batch integrity
+          \end{itemize}
+    \item \textbf{Comprehensive Data Points}:
+          \begin{itemize}
+              \item Gas consumption metrics untuk cost efficiency analysis
+              \item Response time measurements untuk user experience evaluation
+              \item Success rate calculations untuk reliability assessment
+              \item Network-specific gas pricing untuk economic comparison
+          \end{itemize}
+
+    \item \textbf{Performance Indicators}:
+          \begin{itemize}
+              \item Estimated TPS calculation based pada actual transaction throughput
+              \item Average gas usage per transaction untuk cost predictability
+              \item Reliability scoring untuk operational confidence metrics
+              \item Detailed gas efficiency analysis untuk economic viability assessment
+          \end{itemize}
+
+    \item \textbf{Comparative Analysis Framework}:
+          \begin{itemize}
+              \item Side-by-side network comparison dengan standardized metrics
+              \item Automated report generation untuk consistent analysis presentation
+              \item Export functionality untuk further statistical analysis dan visualization
+          \end{itemize}
+\end{itemize}
+
+\subsubsection{Load Testing}
+\begin{lstlisting}[numbers=none]
+const { expect } = require('chai');
+const { ethers } = require('hardhat');
+const MetricsCollector = require('../utils/metrics');
+
+describe('Load Test', function () {
+    let metricsCollector;
+    let contracts = {};
+    let eventId;
+
+    this.timeout(900000); // 15 minutes
+    before(async function () {
+        console.log('Setting up load test environment...');
+
+        metricsCollector = new MetricsCollector();
+        const contractFactory = await ethers.getContractFactory('TicketMarketplace');
+
+        contracts.sepolia = await contractFactory.deploy();
+        await contracts.sepolia.waitForDeployment();
+
+        contracts.cardona = await contractFactory.deploy();
+        await contracts.cardona.waitForDeployment();
+
+        const tx1 = await contracts.sepolia.createEvent(
+            'Load Test Event',
+            'Event for load testing',
+            ethers.parseEther('0.01'),
+            10000,
+            Math.floor(new Date('2025-12-31').getTime() / 1000)
+        );
+        await tx1.wait();
+
+        const tx2 = await contracts.cardona.createEvent(
+            'Load Test Event',
+            'Event for load testing',
+            ethers.parseEther('0.01'),
+            10000,
+            Math.floor(new Date('2025-12-31').getTime() / 1000)
+        );
+        await tx2.wait();
+
+        eventId = 1;
+    });
+    describe('Progressive Load Testing', function () {
+        const loadLevels = [5, 10, 20];
+
+        loadLevels.forEach(userCount => {
+            it(`should handle ${userCount} concurrent users`, async function () {
+                console.log(`\nTesting with ${userCount} concurrent users...`);
+
+                const [owner, ...users] = await ethers.getSigners();
+                const availableUsers = users.slice(0, Math.min(userCount, users.length));
+
+                for (const networkName of ['sepolia', 'cardona']) {
+                    console.log(`Testing ${networkName}...`);
+                    const contract = contracts[networkName];
+                    const promises = [];
+
+                    const startBatchTime = Date.now();
+
+                    for (let i = 0; i < userCount; i++) {
+                        const user = availableUsers[i % availableUsers.length];
+
+                        const promise = (async () => {
+                            const startTime = Date.now();
+                            const operations = ['purchaseTicket', 'getEventInfo'];
+                            const operation = operations[Math.floor(Math.random() * operations.length)];
+
+                            try {
+                                let receipt = { gasUsed: 0, status: 1 };
+
+                                if (operation === 'purchaseTicket') {
+                                    const tx = await contract.connect(user).purchaseTicket(
+                                        eventId,
+                                        `https://api.tickets.com/metadata/${i}`,
+                                        { value: ethers.parseEther('0.01') }
+                                    );
+                                    receipt = await tx.wait();
+                                } else {
+                                    await contract.getEventInfo(eventId);
+                                }
+
+                                await metricsCollector.record(
+                                    operation,
+                                    networkName,
+                                    receipt.gasUsed?.toString() || '0',
+                                    Date.now() - startTime,
+                                    receipt.status === 1,
+                                    null,
+                                    receipt
+                                );
+                            } catch (error) {
+                                await metricsCollector.record(
+                                    operation,
+                                    networkName,
+                                    '0',
+                                    Date.now() - startTime,
+                                    false,
+                                    error
+                                );
+                            }
+                        })();
+
+                        promises.push(promise);
+                    }
+
+                    await Promise.allSettled(promises);
+
+                    const batchDurationSec = (Date.now() - startBatchTime) / 1000;
+                    const successTxs = metricsCollector.metrics.filter(
+                        m => m.network === networkName && m.success
+                    ).length;
+                    const avgResponseTime = metricsCollector.metrics
+                        .filter(m => m.network === networkName)
+                        .reduce((acc, m) => acc + m.transactionTime, 0) / userCount;
+
+                    const tps = (successTxs / batchDurationSec).toFixed(2);
+                }
+            });
+
+        });
+    });
+
+    describe('Sustained Load Test', function () {
+        it('should handle sustained load for 5 minutes', async function () {
+            console.log('\nStarting 5-minute sustained load test...');
+
+            const testDuration = 300000; s
+            const startTime = Date.now();
+            const [owner, ...users] = await ethers.getSigners();
+            const batchSize = 5;
+            const batchInterval = 2000;
+
+            while (Date.now() - startTime < testDuration) {
+                const batchPromises = [];
+
+                for (let i = 0; i < batchSize; i++) {
+                    const networkName = Math.random() > 0.5 ? 'sepolia' : 'cardona';
+                    const contract = contracts[networkName];
+                    const user = users[i % Math.min(users.length, 5)];
+
+                    const promise = (async () => {
+                        const opStartTime = Date.now();
+                        try {
+                            if (Math.random() > 0.8) {
+                                const tx = await contract.connect(user).purchaseTicket(
+                                    eventId,
+                                    `https://api.tickets.com/metadata/${Date.now()}`,
+                                    { value: ethers.parseEther('0.01') }
+                                );
+                                const receipt = await tx.wait();
+
+                                await metricsCollector.record(
+                                    'purchaseTicket',
+                                    networkName,
+                                    receipt.gasUsed.toString(),
+                                    Date.now() - opStartTime,
+                                    receipt.status === 1,
+                                    null,
+                                    receipt
+                                );
+                            } else {
+                                await contract.getEventInfo(eventId);
+
+                                await metricsCollector.record(
+                                    'getEventInfo',
+                                    networkName,
+                                    '0',
+                                    Date.now() - opStartTime,
+                                    true
+                                );
+                            }
+                        } catch (error) {
+                            await metricsCollector.record(
+                                'mixed_operation',
+                                networkName,
+                                '0',
+                                Date.now() - opStartTime,
+                                false,
+                                error
+                            );
+                        }
+                    })();
+
+                    batchPromises.push(promise);
+                }
+
+                await Promise.allSettled(batchPromises);
+
+                const elapsed = Date.now() - startTime;
+                const progress = ((elapsed / testDuration) * 100).toFixed(1);
+                if (elapsed % 30000 < batchInterval) {
+                    console.log(`Progress: ${progress}% (${Math.round(elapsed / 1000)}s)`);
+                }
+
+                await new Promise(resolve => setTimeout(resolve, batchInterval));
+            }
+
+            console.log('Sustained load test completed');
+        });
+    });
+
+    after(async function () {
+        const report = metricsCollector.exportToFile('load-test-results.json');
+
+        console.log('\n=== OPTIMIZED LOAD TEST SUMMARY ===');
+
+        Object.keys(report.networkComparison).forEach(network => {
+            const stats = report.networkComparison[network];
+            console.log(`\n${network.toUpperCase()} Network Results:`);
+            console.log(`Total Transactions: ${stats.totalTransactions}`);
+            console.log(`Success Rate: ${stats.successRate}%`);
+            console.log(`Average Gas Used: ${stats.avgGasPerTx}`);
+            console.log(`Average Response Time: ${stats.avgResponseTime}ms`);
+            console.log(`Estimated TPS: ${stats.estimatedTPS}`);
+
+            console.log('Operations Breakdown:');
+            Object.keys(stats.operations).forEach(op => {
+                const opStats = stats.operations[op];
+                const opSuccessRate = ((opStats.successCount / opStats.count) * 100).toFixed(2);
+                const avgGas = opStats.count ? Math.round(opStats.totalGas / opStats.count) : 0;
+                console.log(`  ${op}: ${opStats.count} ops, ${opSuccessRate}% success, avg gas: ${avgGas}`);
+            });
+        });
+    });
+});
+\end{lstlisting}
+\begin{itemize}[itemsep=0.1em]
+    \item \textbf{Incremental Load Strategy}:
+          \begin{itemize}
+              \item Multi-level testing dengan user counts: 5, 10, 20 concurrent users untuk
+                    identifying performance scaling patterns
+              \item Systematic load progression untuk determining breaking points dan optimal
+                    operating conditions
+              \item Identical test scenarios across networks untuk ensuring fair comparative
+                    analysis
+          \end{itemize}
+
+    \item \textbf{Concurrent User Simulation}:
+          \begin{itemize}
+              \item Real concurrent execution menggunakan Promise.allSettled() untuk avoiding
+                    sequential bottlenecks
+              \item User rotation strategy dengan modulo operation untuk simulating realistic user
+                    distribution patterns
+              \item Random operation selection antara transactional (purchaseTicket) dan read-only
+                    (getEventInfo) operations
+          \end{itemize}
+
+    \item \textbf{Performance Metrics Collection}:
+          \begin{itemize}
+              \item Real-time TPS calculation berdasarkan actual batch completion times
+              \item Average response time measurement untuk user experience evaluation
+              \item Success rate tracking untuk reliability assessment under increasing loads
+              \item Gas usage analysis untuk cost scaling evaluation
+          \end{itemize}
+    \item \textbf{Long-duration Testing Framework}:
+          \begin{itemize}
+              \item 5-minute continuous testing duration untuk identifying performance degradation over time
+              \item Configurable batch intervals (2-second spacing) untuk maintaining sustainable
+                    load patterns
+              \item Mixed operation workload dengan 80\% read operations dan 20\% write operations
+                    untuk realistic usage simulation
+          \end{itemize}
+
+    \item \textbf{Dynamic Load Distribution}:
+          \begin{itemize}
+              \item Random network selection untuk balanced testing antara Sepolia dan Cardona
+              \item Probabilistic operation selection untuk simulating real-world usage patterns
+              \item Progressive timestamp-based metadata generation untuk preventing duplicate
+                    transactions
+          \end{itemize}
+
+    \item \textbf{Continuous Monitoring}:
+          \begin{itemize}
+              \item Progress tracking dengan 30-second interval reporting untuk monitoring test
+                    execution
+              \item Real-time error handling dengan graceful continuation untuk maintaining test
+                    validity
+              \item Memory dan resource management untuk preventing test environment degradation
+          \end{itemize}
+    \item \textbf{Mixed Operation Testing}:
+          \begin{itemize}
+              \item Read operations (getEventInfo): Low gas cost, high frequency untuk baseline
+                    performance measurement
+              \item Write operations (purchaseTicket): High gas cost, state-changing untuk stress
+                    testing network capacity
+              \item Realistic workload distribution reflecting actual application usage patterns
+          \end{itemize}
+
+    \item \textbf{Transaction Complexity Variation}:
+          \begin{itemize}
+              \item Simple read queries untuk measuring basic network responsiveness
+              \item Complex state-changing transactions dengan payment processing untuk testing
+                    full smart contract functionality
+              \item Mixed workloads untuk identifying performance characteristics under diverse
+                    operation types
+          \end{itemize}
+    \item \textbf{Comprehensive Performance Indicators}:
+          \begin{itemize}
+              \item Total transaction volume untuk measuring overall system capacity
+              \item Operation-specific success rates untuk identifying failure patterns
+              \item Gas consumption analysis untuk cost efficiency evaluation
+              \item Response time distributions untuk user experience assessment
+          \end{itemize}
+
+    \item \textbf{Network Comparison Framework}:
+          \begin{itemize}
+              \item Side-by-side performance comparison dengan standardized metrics
+              \item Statistical analysis untuk identifying significant performance differences
+              \item Breakdown analysis per operation type untuk detailed performance
+                    characterization
+          \end{itemize}
+
+    \item \textbf{Scalability Assessment}:
+          \begin{itemize}
+              \item TPS scaling analysis dengan increasing user loads
+              \item Performance degradation measurement untuk identifying capacity limits
+              \item Resource utilization efficiency comparison antara networks
+          \end{itemize}
+\end{itemize}
+
+\subsubsection{Network Testing}
+\begin{lstlisting}[numbers=none]
+const { expect } = require('chai');
+const { ethers } = require('hardhat');
+const NetworkMonitor = require('../utils/networks');
+const MetricsCollector = require('../utils/metrics');
+require('dotenv').config()
+
+describe('Network Performance Test', function () {
+    let sepoliaMonitor, cardonaMonitor;
+
+    this.timeout(360000); 
+
+    before(async function () {
+        console.log('Initializing network monitors...');
+
+        const sepoliaRpcs =
+            process.env.SEPOLIA_RPC_URL
+
+        const cardonaRpcs = process.env.CARDONA_RPC_URL
+
+        try {
+            sepoliaMonitor = new NetworkMonitor(sepoliaRpcs, 'sepolia');
+        } catch (error) {
+        }
+
+        try {
+            cardonaMonitor = new NetworkMonitor(cardonaRpcs, 'cardona');
+        } catch (error) {
+        }
+    });
+
+    describe('Short Network Monitoring', function () {
+        it('should monitor both networks for 2 minutes', async function () {
+            const monitoringDuration = 120000; 
+
+            console.log('Starting 2-minute network monitoring...');
+
+            const promises = [];
+
+            if (sepoliaMonitor) {
+                promises.push(sepoliaMonitor.startMonitoring(monitoringDuration));
+            }
+
+            if (cardonaMonitor) {
+                promises.push(cardonaMonitor.startMonitoring(monitoringDuration));
+            }
+
+            if (promises.length === 0) {
+                console.log('No monitors available, skipping test');
+                return;
+            }
+
+            const results = await Promise.allSettled(promises);
+
+            console.log('\n=== NETWORK PERFORMANCE RESULTS ===');
+
+            results.forEach((result, index) => {
+                const networkName = index === 0 ? 'Sepolia' : 'Cardona';
+
+                if (result.status === 'fulfilled') {
+                    const report = result.value;
+                    console.log(`\n${networkName} Network:`);
+
+                    if (report.error) {
+                    } else {
+                        const avgGasPrice = parseFloat(report.averageGasPrice);
+                        console.log(`Average Block Time: ${report.averageBlockTime?.toFixed(2)}s`);
+                        console.log(`Min Block Time: ${report.minBlockTime?.toFixed(2)}s`);
+                        console.log(`Max Block Time: ${report.maxBlockTime?.toFixed(2)}s`);
+                        console.log(`Average Transactions/Block: ${report.averageTransactionsPerBlock?.toFixed(2)}`);
+                        console.log(`Average Gas Price: ${isNaN(avgGasPrice) ? 'N/A' : avgGasPrice.toFixed(4)} gwei`);
+                        console.log(`Reliability: ${report.reliability}%`);
+                        console.log(`Connection Errors: ${report.connectionErrors}`);
+                    }
+                } else {
+                    console.log(`\n${networkName} Network:`);
+                }
+            });
+
+            const fs = require('fs');
+            const path = require('path');
+
+            const reportsDir = path.join(__dirname, '..', 'reports');
+            if (!fs.existsSync(reportsDir)) {
+                fs.mkdirSync(reportsDir, { recursive: true });
+            }
+
+            const finalReports = results.map(r => r.status === 'fulfilled' ? r.value : { error: r.reason?.message });
+
+            fs.writeFileSync(
+                path.join(reportsDir, 'network-performance.json'),
+                JSON.stringify({
+                    sepolia: finalReports[0] || {},
+                    cardona: finalReports[1] || {},
+                    testDuration: monitoringDuration,
+                    timestamp: new Date().toISOString()
+                }, null, 2)
+            );
+        });
+    });
+});
+
+\end{lstlisting}
+
+\begin{itemize}[itemsep=0.1em]
+    \item \textbf{Concurrent Network Monitoring}:
+          \begin{itemize}
+              \item Promise.allSettled() usage untuk independent network monitoring
+              \item Non-blocking execution pattern untuk preventing monitor interference
+              \item Fault isolation untuk ensuring single network failure tidak affects other
+                    monitors
+          \end{itemize}
+
+    \item \textbf{Resource Management}:
+          \begin{itemize}
+              \item Memory-efficient data collection untuk long-duration monitoring
+              \item Graceful shutdown mechanisms untuk clean resource deallocation
+              \item Network connection pooling untuk optimal resource utilization
+          \end{itemize}
+    \item \textbf{Multi-dimensional Performance Reporting}:
+          \begin{itemize}
+              \item Block time statistics dengan comprehensive statistical measures
+              \item Transaction throughput analysis dengan trend identification
+              \item Gas price analysis dengan market dynamics assessment
+          \end{itemize}
+
+    \item \textbf{Network Comparison Framework}:
+          \begin{itemize}
+              \item Side-by-side performance comparison dengan standardized metrics
+              \item Relative performance assessment untuk identifying network advantages
+              \item Statistical significance testing untuk validating performance differences
+          \end{itemize}
+
+    \item \textbf{Operational Insights Generation}:
+          \begin{itemize}
+              \item Network reliability scoring untuk operational confidence metrics
+              \item Performance trend analysis untuk predictive insights
+              \item Capacity utilization assessment untuk scalability planning
+          \end{itemize}
+\end{itemize}

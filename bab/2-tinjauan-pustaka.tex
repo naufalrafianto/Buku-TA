@@ -25,8 +25,8 @@ diverifikasi. Jika lolos verifikasi, blok tersebut ditambahkan ke rantai blok
 yang ada.
 
 \begin{figure} [H] \centering
-  \includegraphics[scale=0.45]{gambar/bab2/merkle-hash-tree.png}
-  \caption{Merkle Tree Methodology \parencite{MerkleTree}}
+  \includegraphics[width=\textwidth]{gambar/bab2/merkle-hash-tree.png}
+  \caption{Merkle Tree Methodology }
   \label{fig:MerkleTree}
 \end{figure}
 
@@ -62,8 +62,8 @@ seperti \emph{Proof of Work} (PoW), \emph{Proof of Stake} (PoS), \emph{dan
 transaksi yang dilakukan.
 
 \begin{figure} [H] \centering
-  \includegraphics[scale=0.45]{gambar/bab2/Structureofblocksinblockchain.png}
-  \caption{Struktur Blockchain \parencite{BlockchainStructure}}
+  \includegraphics[width=\textwidth]{gambar/bab2/Structureofblocksinblockchain.png}
+  \caption{Struktur Blockchain }
   \label{fig:BlockchainStructure}
 \end{figure}
 
@@ -100,6 +100,22 @@ hingga 4 MB (meskipun dalam praktiknya hanya sekitar 2 MB) tanpa mengubah kode
 inti blockchain. Namun, peningkatan ini tidak cukup untuk meningkatkan TPS
 secara signifikan dan tidak menyelesaikan masalah skalabilitas secara
 menyeluruh.
+
+\section{Non-Fungible Token (NFT)}
+\label{sec:nft}
+Non-Fungible Token (NFT) merupakan representasi digital dari suatu aset yang memiliki keunikan tersendiri dan tidak dapat dipertukarkan satu sama lain secara langsung (non-fungible), berbeda dengan cryptocurrency tradisional yang bersifat homogen dan dapat dipertukarkan dengan nilai yang sama. NFT dibangun di atas teknologi blockchain dan biasanya mengikuti standar teknis yang telah ditetapkan seperti ERC-721 atau ERC-1155 yang diperkenalkan dalam ekosistem Ethereum, dengan ERC-721 menjadi standar pertama yang specifically designed untuk non-fungible tokens \parencite{Entriken2018}. Standar ERC-721 memungkinkan setiap token memiliki metadata yang bersifat unik dan immutable, termasuk nama, deskripsi, gambar, atribut khusus, dan informasi terkait lainnya yang terhubung dengan suatu entitas digital atau fisik melalui cryptographic proofs yang memastikan authenticity dan ownership \parencite{Wang2021}.
+Berbeda dengan token yang bersifat fungible seperti ETH, BTC, atau stablecoin yang dapat dipertukarkan dengan nilai equivalen, NFT merepresentasikan kepemilikan individual dan unik terhadap aset tertentu yang tidak dapat diduplikasi atau disubstitusi, menciptakan digital scarcity yang memiliki nilai ekonomi dan sosial \parencite{Chalmers2022}. Karakteristik fundamental NFT meliputi uniqueness (setiap token memiliki identifier yang distinct), indivisibility (tidak dapat dibagi menjadi pecahan yang lebih kecil), ownership verification (kepemilikan dapat diverifikasi secara cryptographic), dan transferability (dapat dipindahkan antar wallet dengan transaction history yang transparent) \parencite{Nadini2021}. Hal ini membuat NFT sangat cocok digunakan dalam berbagai konteks aplikasi seperti digital art, virtual collectibles, gaming assets, digital identity certificates, intellectual property rights, real estate documentation, hingga innovative ticketing systems yang require proof of ownership dan authenticity verification.
+Teknologi blockchain yang mendasari NFT menyediakan infrastruktur decentralized yang memungkinkan storage dan verification dari digital assets tanpa requiring central authority atau trusted third parties \parencite{Ante2022}. Smart contracts yang mengatur NFT functionality dapat mengotomatisasi complex business logic seperti royalty distributions, conditional transfers, access controls, dan lifecycle management, memberikan programmable ownership yang tidak mungkin dicapai dengan traditional digital assets \parencite{Kugler2021}. Blockchain immutability memastikan bahwa ownership records dan transaction history tidak dapat dimanipulasi atau deleted, providing permanent audit trail yang crucial untuk high-value digital assets dan applications yang require transparency dan accountability.
+Dalam sistem tiket konser, penerapan NFT memberikan keunggulan signifikan dibandingkan dengan sistem tiket konvensional yang typically vulnerable terhadap fraud, counterfeiting, dan centralized control yang dapat dieksploitasi oleh malicious actors \parencite{Sarmah2018}. Tiket berbasis NFT dapat menyimpan comprehensive data identitas seperti nomor kursi spesifik, lokasi venue dengan koordinat yang exact, waktu pelaksanaan event dengan timezone yang accurate, kategori tiket dengan pricing tier, serta status penggunaan dan validation history secara langsung dalam token metadata yang stored on-chain atau referenced through IPFS untuk efficient storage management \parencite{Dowling2022}.
+Dengan memanfaatkan blockchain sebagai infrastruktur dasar, sistem ini memberikan unprecedented levels dari transparansi yang memungkinkan semua stakeholders untuk verify ticket authenticity dan ownership history, keterlacakan yang comprehensive untuk tracking ticket lifecycle dari issuance hingga consumption, dan ketahanan terhadap manipulasi data melalui cryptographic security mechanisms yang inherent dalam blockchain technology \parencite{Wilson2022}. NFT tiket tidak hanya bersifat digital dan mudah diakses melalui standard wallet applications, tetapi juga dapat diverifikasi keasliannya secara otomatis dan real-time tanpa harus melibatkan pihak ketiga atau centralized verification systems yang introduce single points of failure dan potential security vulnerabilities \parencite{Chohan2021}.
+Smart contract integration memungkinkan otomatisasi sophisticated processes seperti multi-stage ticket validation dengan conditional logic, pembatasan waktu penggunaan berdasarkan event scheduling, geographic restrictions untuk location-specific events, capacity management untuk preventing overselling, hingga automatic ticket burning setelah digunakan untuk eliminating possibility of reuse, sehingga secara significant mengurangi risiko penipuan, duplikasi tiket yang historically plagued traditional ticketing systems, dan scalping practices yang involve purchasing tickets with intention untuk resale at inflated prices \parencite{Valeonti2021}.
+NFT ticketing systems juga membuka innovative economic opportunities seperti programmable royalties yang secara otomatis memberikan percentage dari secondary sales kepada original event organizers atau artists, creating sustainable revenue streams yang benefit creators dalam jangka panjang \parencite{Kugler2021}. Advanced platforms mengintegrasikan sophisticated loyalty systems atau reward mechanisms berbasis kepemilikan NFT yang dapat provide exclusive benefits seperti early access untuk future events, exclusive merchandise opportunities, backstage access privileges, atau special recognition untuk longtime supporters, membantu membangun relasi jangka panjang dan emotional connection antara artists dan fanbase mereka \parencite{Frye2022}.
+Ownership model yang inherent dalam NFT technology memberikan users dengan complete control atas digital assets yang mereka miliki, berbeda dengan traditional digital tickets yang typically controlled oleh centralized platforms dan dapat be revoked atau modified without user consent \parencite{Chalmers2022}. Setiap transaksi dalam NFT ecosystem tercatat secara permanen dalam blockchain dengan cryptographic security yang memastikan data integrity dan tidak dapat diubah atau dihapus oleh any single party, providing immutable provenance records yang valuable untuk legal purposes, tax reporting, dan investment tracking \parencite{Ante2022}.
+Dalam konteks layer-2 blockchain solutions seperti zkEVM yang implement zero-knowledge rollup technology, NFT tiket dapat diterbitkan dan ditransaksikan dengan gas fees yang significantly lower dibandingkan layer-1 Ethereum mainnet, making microtransactions dan frequent trading economically viable, sambil tetap mempertahankan security guarantees yang equivalent dengan layer-1 through cryptographic proofs yang verify transaction validity \parencite{Buterin2021}. Layer-2 scaling solutions juga provide faster transaction finality dan higher throughput, enabling real-time ticket transfers dan instant verification processes yang improve user experience significantly compared dengan layer-1 limitations \parencite{Gudgeon2020}.
+Environmental considerations yang traditionally associated dengan blockchain energy consumption dapat be addressed through layer-2 solutions dan proof-of-stake consensus mechanisms yang dramatically reduce carbon footprint per transaction, making NFT ticketing systems more sustainable dan environmentally responsible compared dengan traditional paper-based ticketing yang involve physical production, distribution, dan disposal processes \parencite{Stoll2021}. Zero-knowledge rollups specifically provide energy-efficient scaling yang maintains decentralization benefits while reducing environmental impact through efficient batch processing dan cryptographic optimizations.
+Interoperability features dari NFT standards memungkinkan integration dengan various platforms, wallets, dan applications, creating ecosystem effects dimana ticket holders dapat utilize their NFTs across multiple services dan experiences, extending value proposition beyond single event attendance \parencite{Wang2021}. Cross-platform compatibility juga enables innovation dalam areas seperas metaverse integration, virtual event experiences, dan hybrid physical-digital entertainment formats yang represent future directions dalam entertainment industry.
+Security advantages dari NFT ticketing include cryptographic authentication yang eliminate possibility of counterfeiting, distributed storage yang prevent single points of failure, transparent ownership verification yang reduce fraud, dan programmable access controls yang enable sophisticated permission management \parencite{Wilson2022}. Smart contract security auditing dan formal verification processes dapat provide additional assurance untuk high-stakes applications dimana security breaches could result dalam significant financial losses atau reputational damage.
+Secara keseluruhan, NFT technology bukan sekadar representasi digital dari physical atau digital assets, melainkan juga foundational technology untuk menciptakan entirely new paradigms dalam ownership, distribution, dan value creation yang lebih equitable, transparent, dan truly decentralized \parencite{Chalmers2022}. Dalam dunia entertainment dan live events, adopsi NFT untuk ticketing systems membawa fundamental innovation dalam cara event organizers dapat berinteraksi dengan participants, sekaligus memberikan consumer protection yang superior terhadap manipulative practices yang lazim ditemukan dalam traditional centralized systems, ultimately democratizing access dan creating more fair markets untuk event tickets \parencite{Valeonti2021}.
 
 \section{Ethereum dan Layer-2}
 \label{sec:ethereumdanlayer2}
@@ -151,6 +167,13 @@ tetap mencatat data transaksi di rantai utama meskipun eksekusinya dilakukan
 
 \subsection{Zero-Knowledge Rollup (ZK Rollup)}
 \label{sec:zkrollup}
+
+\begin{figure} [H] \centering
+  \includegraphics[width=\textwidth]{gambar/bab2/1_Qp1F1a5D5xMTplZsxVcisQ.png}
+  \caption{Struktur ZK Rollup}
+  \label{fig:zkrollup}
+\end{figure}
+
 Zero-Knowledge Rollup (ZK Rollup) adalah solusi scaling Layer-2 yang
 meningkatkan throughput jaringan blockchain dengan memproses banyak transaksi
 secara off-chain dan mengirimkan bukti kriptografi ke rantai utama (mainnet).
@@ -161,39 +184,106 @@ off-chain dan mengompilasinya menjadi satu transaksi tunggal dengan
 menghasilkan bukti kriptografi yang disebut ZK-SNARK (Zero-Knowledge Succinct
 Non-Interactive Argument of Knowledge). Bukti ini memverifikasi bahwa seluruh
 transaksi dalam batch valid tanpa perlu memverifikasi masing-masing transaksi
-secara individual di mainnet \parencite{Chaliasos2023}. Proses implementasi ZK
-Rollup secara umum meliputi beberapa tahapan: pengguna mengirimkan transaksi ke
-operator ZK Rollup, operator mengumpulkan transaksi dalam batch, kemudian smart
-contract khusus menghasilkan bukti ZK untuk batch tersebut. Bukti dan data
-status dikirim ke kontrak di mainnet, yang kemudian memverifikasi bukti dan
-memperbarui status blockchain. Beberapa implementasi ZK Rollup yang populer di
-industri blockchain termasuk zkSync dari Matter Labs, Polygon zkEVM yang
-menghadirkan kompatibilitas penuh dengan Ethereum Virtual Machine (EVM), serta
-StarkNet yang menggunakan bahasa pemrograman Cairo untuk smart contract. Setiap
-implementasi memiliki karakteristik dan trade-off masing-masing dalam hal
-skalabilitas, kompatibilitas, dan kompleksitas yang perlu dipertimbangkan saat
-penggunaannya. \parencite{Wackerow2024}
+secara individual di mainnet \parencite{Chaliasos2023}.
 
+Arsitektur fundamental ZK Rollup terdiri dari beberapa komponen kritikal yang
+be-kerja secara sinergis untuk mencapai efisiensi optimal. \emph{Sequencer}
+bertanggung jawab untuk mengum-pulkan dan mengurutkan transaksi dari pengguna,
+memastikan konsistensi temporal dalam pemrosesan batch. \emph{Prover}
+menggunakan algoritma kriptografi kompleks untuk menghasilkan bukti
+zero-knowledge yang memvalidasi kebenaran komputasi off-chain tanpa
+mengungkapkan detail spesifik transaksi. \emph{Verifier contract} di Layer-1
+melakukan validasi bukti yang diterima dan memperbarui state root yang
+merepresentasikan kondisi terkini dari seluruh sistem
+\parencite{MatterLabs2023}. Komponen \emph{state manager} mengelola transisi
+status blockchain secara deterministik, memastikan bahwa setiap perubahan dapat
+diverifikasi dan direproduksi. Mekanisme \emph{data availability} memastikan
+bahwa informasi transaksi tetap dapat diakses oleh semua partisipan jaringan,
+mencegah kemungkinan \emph{data withholding attacks} yang dapat mengompromikan
+integritas sistem.
+
+Proses implementasi ZK Rollup secara umum meliputi beberapa tahapan yang
+terintegrasi dalam workflow yang sophisticated: pengguna mengirimkan transaksi
+ke operator ZK Rollup melalui interface yang kompatibel dengan wallet standar
+seperti MetaMask, operator mengumpulkan transaksi dalam batch dengan
+mempertimbangkan optimasi gas dan prioritas fee, kemudian smart contract khusus
+menghasilkan bukti ZK untuk batch tersebut menggunakan proving systems seperti
+PLONK atau STARK. Bukti dan data status dikirim ke kontrak di mainnet, yang
+kemudian memverifikasi bukti dan memperbarui status blockchain dengan
+computational overhead yang minimal dibandingkan dengan verifikasi individual
+transaksi \parencite{polygon2024}. Tahapan preprocessing melibatkan validasi
+syntax dan semantic dari setiap transaksi, memastikan compliance dengan
+protocol rules sebelum dimasukkan ke dalam batch. \emph{Circuit compilation}
+mengkonversi logic transaksi menjadi arithmetic circuits yang dapat diproses
+oleh zero-knowledge proving systems. Proses \emph{witness generation}
+menciptakan private inputs yang diperlukan untuk menghasilkan proofs tanpa
+mengungkapkan sensitive information. \emph{Proof aggregation} memungkinkan
+kombinasi multiple proofs menjadi single proof yang lebih efisien untuk
+verification di Layer-1. Mekanisme \emph{finality guarantee} memastikan bahwa
+transaksi yang telah di-commit ke mainnet tidak dapat di-reverse, memberikan
+kepastian ekonomi yang diperlukan untuk aplikasi finansial yang kritical
+\parencite{Buterin2016}. Keunggulan teknis ZK Rollup mencakup \emph{instant
+  finality} dimana transaksi dianggap final segera setelah proof diverifikasi di
+mainnet, berbeda dengan optimistic rollups yang memerlukan challenge period.
+\emph{Privacy preservation} memungkinkan validasi transaksi tanpa mengungkapkan
+detail sensitive seperti amounts atau addresses, memberikan keamanan ekstra
+untuk pengguna.
+
+\section{zkSNARK}
+\label{sec:xksnark}
+
+\begin{figure} [H] \centering
+  \includegraphics[width=\textwidth]{gambar/bab2/zkSNARK.png}
+  \caption{Struktur zkSNARK}
+  \label{fig:zksnark}
+\end{figure}
+
+Gambar \ref{fig:zksnark} yang ditampilkan mengilustrasikan konsep fundamental
+dari kriptografi kunci publik yang menjadi dasar dari teknologi zk-SNARKs,
+sebuah protokol kriptografi revolusioner yang memungkinkan verifikasi komputasi
+tanpa mengungkapkan informasi sensitif yang mendasarinya. Dalam konteks
+zk-SNARKs, sistem ini beroperasi dengan prinsip yang sama dimana Alice (prover)
+dapat membuktikan kepada Bob (verifier) bahwa dia mengetahui suatu informasi
+atau telah melakukan komputasi tertentu tanpa mengungkapkan detail dari
+informasi tersebut. Proses yang digambarkan menunjukkan bagaimana Alice
+menggunakan private key (dA) untuk menghasilkan public key melalui operasi
+kriptografi QA = dA × G, dimana G adalah generator point pada kurva eliptik.
+Konsep ini fundamental dalam Elliptic Curve Cryptography (ECC) yang juga
+menjadi backbone dari implementasi zk-SNARKs modern. Teknologi zk-SNARKs
+menggunakan konsep polynomial commitments dan pairing-based cryptography untuk
+menciptakan bukti yang sangat ringkas (succinct) dan dapat diverifikasi dengan
+cepat. Seperti yang dijelaskan oleh \parencite{ben2014succinct} dalam paper
+fundamental `Succinct Non-Interactive Zero Knowledge for a von Neumann
+Architecture', zkSNARK memungkinkan pembuatan bukti (proof) dengan ukuran
+tetap, tidak bergantung pada tingkat kompleksitas perhitungan yang dibuktikan.
+Implementasi praktis zk-SNARK dalam teknologi blockchain—khususnya pada
+protokol seperti Zcash dan sistem lapis kedua (layer-2) Ethereum seperti zkSync
+dan Polygon zkEVM—memanfaatkan prinsip serupa dengan skema tanda tangan digital
+(digital signature scheme) yang telah dijelaskan sebelumnya. Perbedaan utamanya
+terletak pada kompleksitas komputasi yang dapat dibuktikan dengan digital
+signature hanya membuktikan kepemilikan private key, zk-SNARKs dapat
+membuktikan eksekusi arbitrary computation yang
+kompleks.\parencite{groth2016size} dalam `On the Size of Pairing-based
+Non-interactive Arguments' menunjukkan bagaimana konstruksi zk-SNARKs dapat
+mencapai ukuran proof yang sangat kecil (hanya 3 elemen grup) terlepas dari
+kompleksitas circuit yang dibuktikan. Keamanan zk-SNARKs bergantung pada asumsi
+kriptografi yang kuat seperti Knowledge of Exponent Assumption (KEA) dan
+t-Strong Diffie-Hellman assumption, yang analog dengan discrete logarithm
+problem yang mendasari keamanan ECC dalam digital signature. Namun,
+implementasi zk-SNARKs memerlukan trusted setup ceremony yang menghasilkan
+Common Reference String (CRS) yang harus dipercaya oleh semua pihak. Jika
+parameter setup ini dikompromikan, seluruh sistem keamanan dapat terancam,
+seperti yang dianalisis oleh \parencite{bowe2017scalable} dalam `Scalable
+Multi-party Computation for zk-SNARK Parameters.`
 \section{Polygon zkEVM}
 \label{sec:polygonzkevm}
 \emph{Polygon zkEVM} adalah implementasi \emph{Zero-Knowledge Rollup} yang dirancang khusus untuk memberikan kompatibilitas penuh dengan \emph{Ethereum Virtual Machine (EVM)}. Dengan kata lain, \emph{smart contract} yang sudah ada di \emph{Ethereum} dapat dijalankan secara langsung di \emph{Polygon zkEVM} tanpa perlu penyesuaian kode signifikan. Teknologi \emph{zkEVM} menggunakan bukti kriptografi \emph{zero-knowledge} untuk memverifikasi eksekusi transaksi \emph{off-chain} dan hanya mengirimkan bukti tersebut ke rantai utama \emph{Ethereum}, sehingga mengurangi beban penyimpanan dan perhitungan di \emph{mainnet}. Pendekatan ini memungkinkan \emph{throughput} transaksi yang jauh lebih tinggi dan biaya \emph{gas} yang lebih rendah dibandingkan transaksi langsung di \emph{Ethereum Layer-1} \parencite{polygon2024}. \emph{Polygon zkEVM} juga mempertahankan keamanan dari rantai utama \emph{Ethereum} dengan mengandalkan mekanisme konsensus dan \emph{finalitas} yang sudah teruji, sehingga memberikan solusi skalabilitas yang efektif tanpa mengorbankan desentralisasi atau keamanan. Implementasi ini cocok untuk aplikasi yang membutuhkan performa tinggi dengan biaya rendah, sambil tetap menjaga interoperabilitas penuh dengan ekosistem \emph{Ethereum} yang sudah ada.
 
 \begin{figure} [H] \centering
-  \includegraphics[scale=0.65]{gambar/bab2/zkevm.png}
-  \caption{Diagram Polygon zkEVM \parencite{PolygonzkEVMDiagram}}
+  \includegraphics[width=\textwidth]{gambar/bab2/zkevm.png}
+  \caption{Diagram Polygon zkEVM}
   \label{fig:PolygonzkEVMDiagram}
 \end{figure}
-
-% \begin{figure}[H]
-%   \centering
-
-%   % Ubah dengan nama file gambar dan ukuran yang akan digunakan
-%   \includegraphics[scale=0.35]{gambar/roketluarangkasa.jpg}
-
-%   % Ubah dengan keterangan gambar yang diinginkan
-%   \caption{Peluncuran roket luar angkasa \emph{Discovery} \parencite{roketluarangkasa}.}
-%   \label{fig:roketluarangkasa}
-% \end{figure}
 
 Gambar \ref{fig:PolygonzkEVMDiagram} merupakan arsitektur sistem
 \emph{blockchain} yang tergambar dalam diagram ini menyajikan solusi
@@ -250,32 +340,12 @@ pengembangan perangkat lunak berbasis blockchain \parencite{delmolino2016}.
 \label{sec:smartcontract}
 \emph{Smart Contract} adalah sekumpulan aturan dan logika prosedural berbasis skenario dan respons. Dengan kata lain, \emph{smart contract} adalah kode terdesentralisasi dan terpercaya yang dijalankan di blockchain. Pihak-pihak yang menandatangani kontrak harus sepakat mengenai detail kontrak, kondisi pelanggaran, tanggung jawab atas pelanggaran, serta sumber data eksternal untuk verifikasi. Setelah kesepakatan tercapai, kontrak ini kemudian diterapkan di blockchain dalam bentuk \emph{smart contract} untuk mengotomatisasi pelaksanaan perjanjian atas nama para penandatangan. Seluruh proses ini berjalan tanpa keterlibatan lembaga pusat apa pun. Mekanisme kerja \emph{smart contract} dapat digambarkan pada gambar 2.3. Biasanya, setelah semua pihak menandatangani \emph{smart contract}, kontrak tersebut dilampirkan ke blockchain dalam bentuk kode program (misalnya, seperti transaksi Bitcoin). Kontrak ini kemudian dicatat dalam blockchain setelah disebarluaskan melalui jaringan \emph{peer-to-peer} (P2P) dan diverifikasi oleh node.\emph{smart contract} mencakup sejumlah status yang telah ditentukan sebelumnya, aturan transisi, skenario yang memicu eksekusi kontrak (seperti waktu tertentu atau terjadinya suatu peristiwa), serta respons terhadap skenario tersebut. Blockchain memantau status real-time dari \emph{smart contract} dan mengeksekusinya ketika kondisi pemicu tertentu telah terpenuhi\parencite{delmolino2016}.
 
-\begin{figure} [H] \centering
-  \includegraphics[scale=0.45]{gambar/bab2/The-mechanism-of-smart-contracts.png}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{gambar/bab2/The-mechanism-of-smart-contracts.png}
   \caption{Mekanisme \emph{Smart Contract} \parencite{SmartContractStructure}}
   \label{fig:SmartContractStructure}
 \end{figure}
-
-\section{IPFS}
-\label{sec:ipfs}
-IPFS (InterPlanetary File System) adalah protokol peer-to-peer yang dirancang
-agar memungkinkan pengguna berbagi data melalui sistem file terdistribusi.
-Mirip dengan blockchain, IPFS mengandalkan jaringan node-node yang saling
-terhubung untuk menyimpan data. Sistem ini menggunakan Distributed Hash Table
-(DHT) sebagai mekanisme untuk menemukan lokasi data dengan efisien. Ketika file
-diunggah ke IPFS, file tersebut dipecah menjadi beberapa bagian kecil yang
-disebut chunk, di mana setiap chunk saling terhubung melalui tautan unik.
-Struktur ini memungkinkan data untuk diakses dengan cepat dan efisien di
-seluruh jaringan.Salah satu fitur unggulan IPFS adalah adanya fungsi
-versioning, yang memungkinkan pengguna untuk memperbarui file yang telah
-diunggah dan mencatat seluruh perubahan yang terjadi. Dengan adanya fitur ini,
-pengguna tidak hanya dapat melacak riwayat perubahan, tetapi juga memastikan
-integritas data. Teknologi ini cocok digunakan dalam berbagai aplikasi yang
-membutuhkan pengelolaan file secara terdistribusi, seperti penyimpanan file
-yang aman, berbagi konten, atau mendukung infrastruktur web yang
-terdesentralisasi. IPFS juga menjadi solusi untuk mengurangi ketergantungan
-pada server terpusat, menjadikannya lebih tahan terhadap kegagalan jaringan dan
-serangan siber \parencite{steichen2018}.
 
 \section{ Penelitian Terdahulu}
 \label{sec:penelitianterdahulu}

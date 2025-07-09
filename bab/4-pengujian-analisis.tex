@@ -1,33 +1,258 @@
-\chapter{PENGUJIAN DAN ANALISIS}
-\label{chap:pengujiananalisis}
+\chapter{HASIL DAN PENGUJIAN}
+\label{chap:hasildanpengujian}
 
 % Ubah bagian-bagian berikut dengan isi dari pengujian dan analisis
 
-Pada penelitian ini dipaparkan \lipsum[1][1-5]
+Dalam bab ini, penulis menyajikan hasil-hasil yang diperoleh dari penelitian
+ini. Penelitian yang dilakukan bertujuan untuk mencapai pemahaman yang lebih
+mendalam mengenai aspek-aspek yang relevan dengan topik yang dibahas. Hasil
+yang diharapkan dari penelitian ini adalah untuk memberikan wawasan baru yang
+bermanfaat dalam konteks yang sedang diteliti, serta untuk memvalidasi atau
+memperbarui pengetahuan yang sudah ada. Dengan mengacu pada tujuan penelitian,
+diharapkan temuan-temuan ini dapat memberikan kontribusi yang signifikan
+terhadap pemecahan masalah yang dihadapi dalam domain penelitian yang terkait.
 
-\section{Skenario Pengujian}
-\label{sec:skenariopengujian}
+\section{Hasil}
+\label{sec:hasil}
 
-Pengujian dilakukan dengan \lipsum[1-2]
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{gambar/bab4/create-new-event.png}
+  \caption{Formulir Pembuatan Event Baru}
+  \label{fig:create-new-event}
+\end{figure}
+Gambar \ref{fig:create-new-event} menunjukkan antarmuka pengguna untuk
+membuat event baru pada \emph{platform marketplace} tiket konser berbasis \emph{smart
+  contract}. Formulir ini memungkinkan pengguna untuk memasukkan informasi
+penting seperti nama event, tanggal, waktu, dan jumlah tiket yang
+tersedia. Setelah mengisi formulir, pengguna dapat menekan tombol
+\emph{Create Event} untuk mengirimkan data ke \emph{smart contract} yang
+telah di-deploy pada jaringan Layer-2 Ethereum, yaitu \emph{Polygon zkEVM}.
+Proses ini akan menghasilkan transaksi yang menciptakan event baru pada
+blockchain, yang kemudian dapat dilihat pada \emph{block explorer} seperti
+\emph{PolygonScan}. Dengan demikian, pengguna dapat dengan mudah membuat event
+baru dan mengelola tiket konser secara terdesentralisasi, aman, dan transparan.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{gambar/bab4/Screenshot 2025-07-08 185014.png}
+  \caption{Bukti Transaksi Pembuatan Event Baru}
+  \label{fig:biaya-pembuatan-event}
+\end{figure}
+Dapat dilihat pada \emph{Block Explorer} bahwa \emph{createEvent} membutuhkan biaya transaksi sebesar\textbf{0.000002147867 ETH} dan biaya gas yang dikeluarkan
+adalah \textbf{0.01 Gwei}. Durasi transaksi terjadi selama \textbf{13 detik} dengan \textbf{2 \emph{block confirmations}}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.75\textwidth]{gambar/bab4/Screenshot 2025-07-08 200947.png}
+  \caption{Halaman Event yang Dibuat}
+  \label{fig:halaman-event-dibuat}
+\end{figure}
 
-\section{Evaluasi Pengujian}
-\label{sec:analisispengujian}
+Gambar \ref{fig:halaman-event-dibuat} menunjukkan halaman event yang telah
+dibuat. Halaman ini menampilkan informasi penting mengenai event, seperti nama
+event, tanggal, waktu, dan jumlah tiket yang tersedia. Pengguna dapat melihat
+detail event dan melakukan pembelian tiket dengan menekan tombol \emph{Purchase
+  Ticket}. Setelah menekan tombol tersebut, pengguna akan diarahkan ke halaman
+pembelian tiket yang memungkinkan mereka untuk memilih jumlah tiket yang ingin
+dibeli. Halaman ini juga menampilkan informasi mengenai harga tiket dan total
+biaya yang haruss dibayar. Dengan demikian, pengguna dapat dengan mudah
+mengakses informasi mengenai event yang telah dibuat dan melakukan pembelian
+tiket secara langsung melalui antarmuka pengguna yang telah disediakan.
 
-Dari pengujian yang \lipsum[1]
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.75\textwidth]{gambar/bab4/Screenshot 2025-07-08 201903.png}
+  \caption{Bukti pembelian tiket pada event yang telah dibuat}
+  \label{fig:bukti-pembelian-tiket}
 
-% Contoh pembuatan tabel
-\begin{longtable}{|c|c|c|}
-  \caption{Hasil Pengukuran Energi dan Kecepatan}
-  \label{tb:EnergiKecepatan}                                   \\
-  \hline
-  \rowcolor[HTML]{C0C0C0}
-  \textbf{Energi} & \textbf{Jarak Tempuh} & \textbf{Kecepatan} \\
-  \hline
-  10 J            & 1000 M                & 200 M/s            \\
-  20 J            & 2000 M                & 400 M/s            \\
-  30 J            & 4000 M                & 800 M/s            \\
-  40 J            & 8000 M                & 1600 M/s           \\
-  \hline
-\end{longtable}
+\end{figure}
+Gambar \ref{fig:bukti-pembelian-tiket} menunjukkan ticket minting process dimana event organizers men-create NFT ticket baru dan mentransfernya kepada purchaser, dengan remarkably low transaction fee sebesar \textbf{0.000003955515 ETH} dan effective gas price \textbf{0.01 Gwei}.
 
-\lipsum[2-4]
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.85\textwidth]{gambar/bab4/Screenshot 2025-07-08 215504.png}
+  \caption{Halaman tiket yang telah dibeli}
+  \label{fig:halaman-tiket-dibeli}
+\end{figure}
+
+Gambar \ref{fig:halaman-tiket-dibeli} menunjukkan halaman tiket yang telah
+dibeli. Halaman ini menampilkan informasi penting mengenai tiket, seperti nama
+event, tanggal, waktu, dan jumlah tiket yang telah dibeli. Pengguna juga dapat
+melihat detail tiket yang telah dibeli, termasuk nomor tiket, harga, dan status
+tiket. Pembeli juga dapat menverifikasi kesabsahan tiket dengan melihat alamat
+NFT ke Block Explorer.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.65\textwidth]{gambar/bab4/Screenshot 2025-07-08 204651.png}
+  \caption{Halaman verifikasi tiket yang telah dibeli}
+  \label{fig:halaman-verifikasi-tiket}
+\end{figure}
+Gambar \ref{fig:halaman-verifikasi-tiket} menunjukkan halaman verifikasi
+tiket yang telah dibeli. Halaman ini hanya dapat diakses oleh pembuat event
+yang telah membuat event sebelumnya. Halaman ini menampilkan informasi penting
+mengenai tiket yang telah dibeli, seperti nama event, tanggal, waktu, dan jumlah
+tiket yang telah dibeli. Pada bagian bawah terdapat tombol \emph{Use Ticket} yang berfungsi untuk
+menggunakan tiket yang telah dibeli yang dioperasikan oleh pembuat tiket. Setelah menekan tombol tersebut, tiket akan
+ditandai sebagai telah digunakan dan tidak dapat digunakan kembali.
+
+\subsection{Perbandingan performa Jaringan Sepolia dan Cardona}
+\begin{figure}[H]
+  \centering
+
+  % Ubah dengan nama file gambar dan ukuran yang akan digunakan
+  \includegraphics[width=16cm]{gambar/bab4/radar.png}
+
+  % Ubah dengan keterangan gambar yang diinginkan
+  \caption{Performa Jaringan Sepolia dan Cardona}
+  \label{fig:blockexplorernft}
+
+\end{figure}
+Pada bagian \emph{Tx/Block} dapat dilihat bahwa \emph{Sepolia} sebesar 397.89,
+jauh lebih besar jika dibandingkan dengan \emph{Cardona} sebesar 0.056. Sepolia
+dapat memproses lebih banyak transaksi dalam satu block dibandingkan Cardona.
+\emph{Tx/Block} yang tinggi juga dapat membuat biaya gas lebih rendah karena
+semakin padat block, biaya dapat dibagi dan disebar ke lebih banyak pengguna
+dan juga \emph{Tx/Block} yang tinggi dapat meningkatkan kecepatan respon sistem
+karena lebih banyak transaksi dapat dikonfirmasi dalam satu blok, sehingga jeda
+antartransaksi dapat dikurangi—terutama jika \emph{block time} juga relatif
+cepat. Namun, \emph{Tx/Block} yang terlalu tinggi juga dapat menimbulkan risiko
+\emph{overload} atau \emph{congestion}, khususnya apabila kapasitas validasi
+atau penyebaran blok (\emph{broadcasting}) tidak mencukupi. Hal ini terjadi
+karena setiap \emph{node} harus memverifikasi seluruh transaksi dalam blok
+secara individual, yang dapat menyebabkan \emph{bottleneck}, terutama untuk
+blok yang kompleks, berukuran besar, atau saat proses \emph{syncing node}.
+Kekurangan kedua adalah keamanan yang menurun karena jika blok terlalu padat
+tanpa cukup verifikasi, potensi eksploitasi/serangan meningkat. Kelemahan yang
+terakhir adalah risiko \emph{Forking} dan \emph{Reorg} karena \emph{node} yang
+lambat saat sinkronisasi blok-blok baru. Jika blok sangat besar maka
+\emph{node} perlu waktu dan sumber daya lebih uyntuk memverifikasi dan
+menyimpan blok tersebut. \emph{Node} yang lemah akan tertinggal dalam memproses
+blok-blok baru. Akibatnya \emph{node-node} yang tertinggal bisa tetap
+melanjutakan \emph{chain}-nya sendiri lalu terbentuk percabangan chain
+sementara tau \emph{fork}. Jika percabangan ini cukup besar atau lama, maka
+ketika mayoritas jaringan setuju dengan \emph{chain} lain, maka \emph{node}
+harus melakukan reorganisasi (\emph{reorg}) dengan cara menghapus blok-blok
+lama dan menggantinya dengan yang baru.
+
+Pada bagian \emph{block time} dapat dilihat bahwa \emph{Cardona} unggul.
+Cardona berbasis \emph{zk-rollup} yang menggabungkan banyak transaksi menjadi
+satu \emph{proof} dan mengirimkannya ke Layer-1 Ethereum untuk divalidasi
+secara kolektif. Hal ini memungkinkan waktu pembuatan blok menjadi jauh lebih
+cepat dibandingkan jaringan konvensional seperti \emph{Sepolia}, karena proses
+validasi dilakukan secara off-chain terlebih dahulu sebelum dikonsolidasikan ke
+mainnet. Meskipun \emph{block time} rendah memberikan keunggulan dalam hal
+kecepatan respons sistem, perlu diperhatikan bahwa finalitas transaksi tetap
+menunggu proses verifikasi \emph{zero-knowledge proof} di Layer-1, sehingga
+dapat terjadi sedikit jeda sebelum transaksi benar-benar final.
+\begin{table}[H]
+  \renewcommand{\arraystretch}{1.4}
+  \setlength{\tabcolsep}{12pt}
+  \centering
+  \begin{tabularx}{\textwidth}{|l|X|X|}
+    \hline
+    \textbf{Parameter}           & \textbf{Sepolia} & \textbf{Cardona} \\
+    \hline
+    Rata-rata Waktu Blok (detik) & 12.00            & 3.25             \\
+    Minimum Waktu Blok (detik)   & 12.00            & 3.00             \\
+    Maksimum Waktu Blok (detik)  & 12.00            & 5.00             \\
+    Rata-rata Transaksi per Blok & 387.89           & 0.06             \\
+    Jumlah Total Blok            & 9                & 36               \\
+    \hline
+  \end{tabularx}
+  \caption{Perbandingan Parameter Blok antara Jaringan Sepolia dan Cardona}
+  \label{tab:network-comparison}
+\end{table}
+
+\subsection{Perbandingan Biaya dan Performa Transaksi}
+Pengujian ini dilakukan untuk membandingkan performa dan biaya transaksi antara
+jaringan \emph{Sepolia} dan \emph{Cardona}. Skenario pengujian meliputi
+\emph{createEvent}, \emph{purchaseTicket}, dan \emph{useTicket}. Pengujian
+dilakukan dengan mengirimkan sejumlah transaksi pada kedua jaringan dan
+mengukur waktu yang dibutuhkan untuk memproses transaksi tersebut, serta biaya
+yang dikeluarkan untuk setiap transaksi. Hasil pengujian ini akan digunakan
+untuk menganalisis perbedaan performa dan biaya transaksi antara jaringan
+\emph{Sepolia} dan \emph{Cardona}.
+\begin{figure}[H]
+  \centering
+
+  % Ubah dengan nama file gambar dan ukuran yang akan digunakan
+  \includegraphics[width=\textwidth]{gambar/bab4/gas_price_comparison.png}
+
+  % Ubah dengan keterangan gambar yang diinginkan
+  \caption{Rata-rata Gas Price (Gwei)}
+  \label{fig:avg-gas-price}
+
+\end{figure}
+Berdasarkan gambar \ref{fig:avg-gas-price}, dapat dilihat bahwa rata-rata
+\emph{gas price} pada jaringan \emph{Sepolia} jauh lebih tinggi dibandingkan
+dengan \emph{Cardona}, terlihar perbedaan yang sangat signifikan dimana \emph{Sepolia} memilki \emph{gas price} sebesar \textbf{0.0505 Gwei} sementara \emph{Cardona} hanya \textbf{
+  0.0001 Gwei} menunjukan perbedaan hingga 50 kali lipat dimana transaksi di \emph{Cardona} menghabiskan sekitar \textbf{\$0.000025} per transaksi dibandingkan dengan Sepolia yang pencapai \textbf{\$1.24} per transaksi menghasilkan penghematan hingga \textbf{99.998\%}. Perbedaan ini menunjukkan bahwa biaya transaksi pada jaringan Hal ini disebabkan oleh perbedaan arsitektur dan
+mekanisme konsensus yang digunakan oleh kedua jaringan. \emph{Sepolia} adalah
+jaringan testnet Ethereum yang menggunakan mekanisme konsensus Proof of Work
+(PoW) yang lebih tradisional, sehingga biaya gas cenderung lebih tinggi karena
+tingginya permintaan dan persaingan untuk memproses transaksi. Sementara itu,
+\emph{Cardona} menggunakan teknologi \emph{zk-rollup} yang memungkinkan
+penggabungan banyak transaksi menjadi satu \emph{proof} yang dikirim ke Layer-1
+Ethereum. Dengan demikian, biaya gas pada \emph{Cardona} jauh lebih rendah
+karena transaksi dapat diproses secara kolektif, mengurangi beban pada jaringan
+dan memungkinkan biaya yang lebih efisien. Perbedaan ini menunjukkan bahwa
+penggunaan teknologi \emph{zk-rollup} pada \emph{Cardona} memberikan
+keunggulan signifikan dalam hal efisiensi biaya transaksi dibandingkan dengan
+jaringan \emph{Sepolia} yang masih menggunakan mekanisme konsensus PoW.
+
+\begin{figure}[H]
+  \centering
+
+  % Ubah dengan nama file gambar dan ukuran yang akan digunakan
+  \includegraphics[width=\textwidth]{gambar/bab4/transaction_time_comparison.png}
+
+  % Ubah dengan keterangan gambar yang diinginkan
+  \caption{Rata-rata Waktu Transaksi (ms)}
+  \label{fig:avg-transaction-time}
+
+\end{figure}
+Berdasarkan gambar \ref{fig:avg-transaction-time}, yang membandingkan rata-rata waktu transaksi antara \emph{Sepolia} dan \emph{Cardona}, terlihat bahwa
+\emph{Cardona} memiliki waktu transaksi yang lebih cepat dibandingkan dengan waktu rata-rata \textbf{35.84 ms} pada \emph{Cardona} dan \textbf{51.50 ms} pada \emph{Sepolia}, menunjukan perbedaan performa sekitar \textbf{15.66} ms atau sekitar \textbf{30\%} lebih cepat pada \emph{Cardona}. Teknologi \emph{Polygon zkEVM} yang diimplemetasikan \emph{Cardona} seperti \emph{optimized execution layer} dan \emph{efficient proof generation mechanism} memungkinkan pemrosesan transaksi lebih \emph{streamlined} dibanding dengan standard \emph{Ethereum Virtual Machine} yang digunakan  \emph{Sepolia}. Keunggulan \emph{Cardona} dalam waktu transaksi ini dapat dikaitkan pada faktor-faktor teknis yang sejalan dengan desain Polygon zkEVM, termasuk \emph{parallel processing capabilities} yang memungkinkan banyak transaksi diproses secara bersamaan, serta \emph{optimized state manaagement} yang dapat mengurangi \emph{overhead} dalam validasi transaksi.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\textwidth]{gambar/bab4/avg-tps-comparison.png}
+  \caption{Rata-rata TPS (Transaksi per Detik)}
+  \label{fig:avg-tps-comparison}
+\end{figure}
+Berdasarkan gambar \ref{fig:avg-tps-comparison}, yang membandingkan rata-rata transaksi per detik (TPS) antara \emph{Sepolia} dan \emph{Cardona}, terlihat bahwa \emph{Cardona} memiliki performa yang lebih baik dengan rata-rata TPS sebesar \textbf{27.9} dibandingkan dengan \emph{Sepolia} yang hanya mencapai \textbf{19.42}, menghasilkan peningkatan performa sekitar \textbf{47\%} lebih tinggus. Hal ini menunjukkan bahwa \emph{Cardona} mampu menangani lebih banyak transaksi dalam waktu yang sama dibandingkan dengan \emph{Sepolia}. Teknologi \emph{Zero-Knowledge Rollup} yang digunakan oleh \emph{Cardona} memungkinkan penggabungan banyak transaksi menjadi satu \emph{proof} yang dikirim ke Layer-1 Ethereum, sehingga mengurangi beban pada jaringan dan meningkatkan efisiensi pemrosesan transaksi.
+
+Implikasi dari peningkatan performa ini sangat signifikan bagi pengembangan
+aplikasi yang memerlukan throughput tinggi, seperti platform media sosial
+terdesentralisasi, sistem pembayaran mikro, atau aplikasi yang memerlukan
+interaksi cepat, dimana Cardona secara potensi dapat menangani sekitar
+2,404,800 transaksi (27.9 * 86,400 detik dalam sehari) per hari, dibandingkan
+dengan Sepolia yang hanya mampu menangani sekitar 1,641,600 transaksi (19.42 *
+86,400 detik dalam sehari) per hari. Hal ini membuka peluang baru untuk
+aplikasi yang sebelumnya tidak mungkin dilakukan karena keterbatasan performa
+pada jaringan seperti \emph{Sepolia}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{gambar/bab4/transaction_cost_comparison.png}
+  \caption{Rata-rata Biaya Transaksi (ETH)}
+  \label{fig:avg-transaction-cost}
+\end{figure}
+Berdasarkan gambar \ref{fig:avg-transaction-cost}, yang membandingkan rata-rata biaya transaksi antara \emph{Sepolia} dan \emph{Cardona}, terlihat disparitas yang sangat mencolok. Rata-rata biaya transaksi pada \emph{Sepolia} mencapai \textbf{0.00001097 ETH}, sedangkan pada \emph{Cardona} hanya sekitar \textbf{0.00000002 ETH}. Perbedaan ini menunjukkan bahwa biaya transaksi pada \emph{Cardona} jauh lebih rendah, dengan penghematan sekitar \textbf{99.82\%}.\emph{Potentially optimized gas usage} dalam arsitektur \emph{Polygon zkEVM} memungkinkan eksekusi yang lebih efisien per komputasi unit. Ini berarti bahwa teknologi \emph{Polygon zkEVM} mendobrak tantangan utama adaptasi dari \emph{blockchain}, yaitu harga transaksi yang tinggi seting menjadi penghalang untuk transaksi mikro dan \emph{high-frequency trading} yang semakin umum di dunia digital saat ini. Dengan biaya transaksi yang sangat rendah, \emph{Cardona} memungkinkan pengguna untuk melakukan transaksi dengan lebih efisien dan ekonomis, membuka peluang baru untuk aplikasi yang sebelumnya tidak mungkin dilakukan karena biaya tinggi pada jaringan seperti \emph{Sepolia}.
+
+\begin{table}[H]
+  \renewcommand{\arraystretch}{1.4}
+  \setlength{\tabcolsep}{10pt}
+  \centering
+  \begin{tabularx}{\textwidth}{|l|X|X|X|}
+    \hline
+    \textbf{Metrik}                 & \textbf{Sepolia} & \textbf{Cardona} & \textbf{Selisih} \\
+    \hline
+    Rata-rata Gas Price (Gwei)      & 0.0505           & 0.0001           & 0.0504           \\
+    Rata-rata Waktu Transaksi (ms)  & 51.50            & 35.84            & 15.66            \\
+    Rata-rata Transaksi per detik   & 19.42            & 27.9             & 8.48             \\
+    Rata-rata Biaya Transaksi (ETH) & 0.00001097       & 0.00000002       & 0.00001095       \\
+    \hline
+  \end{tabularx}
+  \caption{Perbandingan Biaya dan Performa Transaksi Sepolia dan Cardona}
+  \label{tab:transaction-comparison}
+\end{table}

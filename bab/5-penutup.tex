@@ -1,34 +1,50 @@
 \chapter{PENUTUP}
 \label{chap:penutup}
 
-% Ubah bagian-bagian berikut dengan isi dari penutup
-
 \section{Kesimpulan}
 \label{sec:kesimpulan}
 
-Berdasarkan hasil pengujian yang \lipsum[1][1-3] sebagai berikut:
+Berdasarkan hasil implementasi dan pengujian yang telah dilakukan, maka dapat
+diambil beberapa kesimpulan sebagai berikut:
 
 \begin{enumerate}[nolistsep]
+  \item Pembuatan platform marketplace tiket konser berbasis smart contract berhasil
+        dilakukan menggunakan kontrak ERC-721 yang dikembangkan dalam bahasa Solidity
+        dan di-deploy pada jaringan Layer-2 Ethereum, yaitu Polygon zkEVM. Kontrak ini
+        mampu mengelola proses minting, validasi penggunaan tiket, dan refund secara
+        terdesentralisasi.
 
-  \item Pembuatan \lipsum[2][1-3]
+  \item Hasil pengujian menunjukkan bahwa fungsi \texttt{purchaseTicket},
+        \texttt{useTicket}, dan \\ \texttt{refundTicket} dapat berjalan sesuai dengan
+        logika yang telah ditentukan. Transaksi minting tiket berhasil tercatat pada
+        block explorer dengan metadata dan informasi kepemilikan yang sesuai dengan
+        hasil simulasi di sisi frontend.
 
-  \item \lipsum[2][4-6]
-
-  \item \lipsum[2][7-10]
-
+  \item Integrasi antara smart contract, antarmuka pengguna berbasis Next.js, dan
+        Firebase untuk otentikasi serta penyimpanan data pembelian memberikan
+        pengalaman pengguna yang cukup baik dan menunjukkan potensi penggunaan
+        teknologi blockchain dalam sistem distribusi tiket yang lebih transparan, aman,
+        dan bebas dari pemalsuan.
 \end{enumerate}
 
 \section{Saran}
 \label{chap:saran}
 
-Untuk pengembangan lebih lanjut pada \lipsum[1][1-3] antara lain:
+Untuk pengembangan lebih lanjut terhadap sistem marketplace tiket konser
+berbasis smart contract ini, beberapa saran yang dapat dipertimbangkan antara
+lain:
 
 \begin{enumerate}[nolistsep]
+  \item Memperbaiki sistem validasi penggunaan tiket agar dapat terintegrasi langsung
+        dengan sistem fisik (misalnya menggunakan QR code scanner) untuk kebutuhan gate
+        checking saat konser berlangsung.
 
-  \item Memperbaiki \lipsum[2][1-3]
+  \item Menambahkan fitur sekunder seperti pasar jual beli tiket bekas (secondary
+        marketplace) yang memungkinkan pengguna untuk menjual kembali tiket yang telah
+        mereka beli dengan tetap menjaga kontrol kepemilikan melalui NFT.
 
-  \item \lipsum[2][4-6]
-
-  \item \lipsum[2][7-10]
-
+  \item Mengembangkan UI/UX yang lebih ramah pengguna dan memperluas dukungan terhadap
+        jaringan blockchain lainnya seperti Arbitrum, Base, atau StarkNet untuk
+        menyediakan pilihan ekosistem Layer-2 yang lebih fleksibel sesuai kebutuhan
+        pengguna.
 \end{enumerate}
