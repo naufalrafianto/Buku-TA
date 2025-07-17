@@ -19,40 +19,72 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
-    \entry{BlockchainStructure}{misc}{}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+    \entry{Ante2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=51af847f7a6f2f8e0dc3c8f5b3fce1d9}{%
+           family={Ante},
+           familyi={A\bibinitperiod},
+           given={Lauri},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{fullhash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{bibnamehash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{authorbibnamehash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{authornamehash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{authorfullhash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Blockchain Structure}
-      \field{urlday}{3}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://statusneo.com/blockchain-architecture-understanding-the-structure-and-applications/
-      \endverb
-      \verb{url}
-      \verb https://statusneo.com/blockchain-architecture-understanding-the-structure-and-applications/
-      \endverb
+      \field{journaltitle}{FinTech}
+      \field{number}{3}
+      \field{title}{The non-fungible token (NFT) market and its relationship with Bitcoin and Ethereum}
+      \field{volume}{1}
+      \field{year}{2022}
+      \field{pages}{216\bibrangedash 224}
+      \range{pages}{9}
     \endentry
-    \entry{butcher2018}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=527dcefd4a095ee2de1a5753c0d9fdcd}{%
-           family={Butcher},
-           familyi={B\bibinitperiod},
-           given={M.},
+    \entry{ben2014succinct}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c225b1561fdce9ac9f61f1edca0e0160}{%
+           family={Ben-Sasson},
+           familyi={B\bibinithyphendelim S\bibinitperiod},
+           given={Eli},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfbdc8dc8205deeb7a8fbc765799dd0b}{%
+           family={Chiesa},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9a80df1ddea18e1b64f84a0cbcdc25f}{%
+           family={Tromer},
+           familyi={T\bibinitperiod},
+           given={Eran},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37e60561c9593ab3c5d37d85a184713e}{%
+           family={Virza},
+           familyi={V\bibinitperiod},
+           given={Madars},
            giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{fullhash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{bibnamehash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{authorbibnamehash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{authornamehash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{authorfullhash}{527dcefd4a095ee2de1a5753c0d9fdcd}
+      \strng{namehash}{efe95f795f4099043fbd4bc4466d77c6}
+      \strng{fullhash}{2d81fda7bd7ef6af75188ac8df854c96}
+      \strng{bibnamehash}{2d81fda7bd7ef6af75188ac8df854c96}
+      \strng{authorbibnamehash}{2d81fda7bd7ef6af75188ac8df854c96}
+      \strng{authornamehash}{efe95f795f4099043fbd4bc4466d77c6}
+      \strng{authorfullhash}{2d81fda7bd7ef6af75188ac8df854c96}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
@@ -60,13 +92,56 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{What next? Oh yes, turning a luxury car into a non-fungible token}
-      \field{year}{2018}
+      \field{journaltitle}{Proceedings of the USENIX Security Symposium}
+      \field{title}{Succinct Non-Interactive Zero Knowledge for a von Neumann Architecture}
+      \field{year}{2014}
+    \endentry
+    \entry{bowe2017scalable}{report}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0274806506056a5f9c69300287f6063a}{%
+           family={Bowe},
+           familyi={B\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=015d26e4871eab7050331efee381386a}{%
+           family={Gabizon},
+           familyi={G\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0487f51f12e1650c1ecbe85c3d103eeb}{%
+           family={Miers},
+           familyi={M\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {IACR Cryptology ePrint Archive}%
+      }
+      \strng{namehash}{83214c3fa9c17f350cacea29545659fd}
+      \strng{fullhash}{b1d4b052fe5d71847f82c05321326245}
+      \strng{bibnamehash}{b1d4b052fe5d71847f82c05321326245}
+      \strng{authorbibnamehash}{b1d4b052fe5d71847f82c05321326245}
+      \strng{authornamehash}{83214c3fa9c17f350cacea29545659fd}
+      \strng{authorfullhash}{b1d4b052fe5d71847f82c05321326245}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2017/1050}
+      \field{title}{Scalable Multi-party Computation for zk-SNARK Parameters in the Random Beacon Model}
+      \field{type}{techreport}
+      \field{year}{2017}
       \verb{urlraw}
-      \verb https://tcrn.ch/2uPJuIf
+      \verb https://eprint.iacr.org/2017/1050
       \endverb
       \verb{url}
-      \verb https://tcrn.ch/2uPJuIf
+      \verb https://eprint.iacr.org/2017/1050
       \endverb
     \endentry
     \entry{Buterin2016}{online}{}
@@ -84,11 +159,11 @@
       \strng{authorbibnamehash}{aad1df1eaf8202bd8dda5cb125b5c4ab}
       \strng{authornamehash}{aad1df1eaf8202bd8dda5cb125b5c4ab}
       \strng{authorfullhash}{aad1df1eaf8202bd8dda5cb125b5c4ab}
+      \field{extraname}{1}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Ethereum platform review: Opportunities and challenges for private and consortium blockchains.}
@@ -102,6 +177,39 @@
       \endverb
       \verb{url}
       \verb http://www.smallake.kr/wp-content/uploads/2016/06/314477721-Ethereum-Platform-%20Review-Opportunities-and-Challenges-for-Private-and-Consortium-Blockchains.pdf
+      \endverb
+    \endentry
+    \entry{Buterin2021}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=850981945102d0f671b6762173c8988a}{%
+           family={Buterin},
+           familyi={B\bibinitperiod},
+           given={Vitalik},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhash}{850981945102d0f671b6762173c8988a}
+      \strng{bibnamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authorbibnamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authornamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authorfullhash}{850981945102d0f671b6762173c8988a}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Ethereum Foundation Blog}
+      \field{note}{Accessed: 2024-12-01}
+      \field{title}{An incomplete guide to rollups}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://vitalik.ca/general/2021/01/05/rollup.html
+      \endverb
+      \verb{url}
+      \verb https://vitalik.ca/general/2021/01/05/rollup.html
       \endverb
     \endentry
     \entry{Chaliasos2023}{article}{}
@@ -163,6 +271,91 @@
       \field{journaltitle}{Imperial College London}
       \field{title}{Analyzing and Benchmarking ZK-Rollups}
       \field{year}{2023}
+    \endentry
+    \entry{Chalmers2022}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=dd824f2db0bcba8a4cf1a382e3accbfe}{%
+           family={Chalmers},
+           familyi={C\bibinitperiod},
+           given={Dominik},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d390cf68200d07baa26b5a7a93e4d98f}{%
+           family={Fisch},
+           familyi={F\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83a0b97ccbda3cc6835186ca3bc095ff}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={Russell},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcfafad4f069cb869369cb1830c1a825}{%
+           family={Quinn},
+           familyi={Q\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=604e15fd1714275673736d598c9e7e89}{%
+           family={Recker},
+           familyi={R\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c7b28a1388812153c30a06cf01682b17}
+      \strng{fullhash}{5ac1d0e63a471d257a8ffe03abf53813}
+      \strng{bibnamehash}{5ac1d0e63a471d257a8ffe03abf53813}
+      \strng{authorbibnamehash}{5ac1d0e63a471d257a8ffe03abf53813}
+      \strng{authornamehash}{c7b28a1388812153c30a06cf01682b17}
+      \strng{authorfullhash}{5ac1d0e63a471d257a8ffe03abf53813}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Business Venturing Insights}
+      \field{title}{Beyond the bubble: Will NFTs and digital proof of ownership empower creative industry entrepreneurs?}
+      \field{volume}{17}
+      \field{year}{2022}
+      \field{pages}{e00309}
+      \range{pages}{-1}
+    \endentry
+    \entry{Chohan2021}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cd19e74cb4c4cfc565e01bd15e9094bb}{%
+           family={Chohan},
+           familyi={C\bibinitperiod},
+           given={Usman\bibnamedelima W},
+           giveni={U\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Critical Blockchain Research Initiative (CBRI)}%
+      }
+      \strng{namehash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{fullhash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{bibnamehash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{authorbibnamehash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{authornamehash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{authorfullhash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Non-fungible tokens: Blockchains, scarcity, and value}
+      \field{type}{Working Paper}
+      \field{year}{2021}
     \endentry
     \entry{delmolino2016}{inbook}{}
       \name{author}{5}{}{%
@@ -265,39 +458,71 @@
       \verb https://link.springer.com/chapter/10.1007/978-3-662-53357-4_7
       \endverb
     \endentry
-    \entry{entriken2018}{online}{}
+    \entry{Dowling2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f30ec1f394c32d5058097c98ac3d2d3a}{%
+           family={Dowling},
+           familyi={D\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{fullhash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{bibnamehash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{authorbibnamehash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{authornamehash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{authorfullhash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Finance Research Letters}
+      \field{title}{Is non-fungible token pricing driven by cryptocurrencies?}
+      \field{volume}{44}
+      \field{year}{2022}
+      \field{pages}{102097}
+      \range{pages}{1}
+    \endentry
+    \entry{Entriken2018}{misc}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=3196ad80c93341b781ead1e014cc2cb5}{%
+        {{un=0,uniquepart=base,hash=2ec990b78817c295355cb14bb1644ea2}{%
            family={Entriken},
            familyi={E\bibinitperiod},
-           given={W.},
+           given={William},
            giveni={W\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=f6a03da881237e5551b4f553f8b1cf48}{%
+        {{un=0,uniquepart=base,hash=b6d0242d0ac13e2113c737e3a65c7860}{%
            family={Shirley},
            familyi={S\bibinitperiod},
-           given={D.},
+           given={Dieter},
            giveni={D\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=0aab1a186e4d45caab2cd3ac22a9957d}{%
+        {{un=0,uniquepart=base,hash=757b45fde6fb23501b318053820cf0c8}{%
            family={Evans},
            familyi={E\bibinitperiod},
-           given={J.},
+           given={Jacob},
            giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a484b6ec0a6aaf77750b25e910a243e4}{%
+        {{un=0,uniquepart=base,hash=5788ef707ef79a303e86496b33028cfa}{%
            family={Sachs},
            familyi={S\bibinitperiod},
-           given={N.},
+           given={Nastassia},
            giveni={N\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{5d764f37ca554004353b0bdc8a6c7aec}
-      \strng{fullhash}{1dd8615fa22946c3f9699f7251986b4c}
-      \strng{bibnamehash}{1dd8615fa22946c3f9699f7251986b4c}
-      \strng{authorbibnamehash}{1dd8615fa22946c3f9699f7251986b4c}
-      \strng{authornamehash}{5d764f37ca554004353b0bdc8a6c7aec}
-      \strng{authorfullhash}{1dd8615fa22946c3f9699f7251986b4c}
+      \strng{namehash}{9d161d794bea8e1af56272f3869eeb8e}
+      \strng{fullhash}{3921617b8ef76ff16c7c7c78986ddfb4}
+      \strng{bibnamehash}{3921617b8ef76ff16c7c7c78986ddfb4}
+      \strng{authorbibnamehash}{3921617b8ef76ff16c7c7c78986ddfb4}
+      \strng{authornamehash}{9d161d794bea8e1af56272f3869eeb8e}
+      \strng{authorfullhash}{3921617b8ef76ff16c7c7c78986ddfb4}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{extradatescope}{labelyear}
@@ -305,44 +530,15 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{ERC-721 Non-Fungible Token Standard}
+      \field{howpublished}{Ethereum Improvement Proposals}
+      \field{number}{721}
+      \field{title}{ERC-721: Non-fungible token standard}
       \field{year}{2018}
       \verb{urlraw}
       \verb https://eips.ethereum.org/EIPS/eip-721
       \endverb
       \verb{url}
       \verb https://eips.ethereum.org/EIPS/eip-721
-      \endverb
-    \endentry
-    \entry{fenech2018}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=23dea6978e29d673e8b2bd932829fe63}{%
-           family={Fenech},
-           familyi={F\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{fullhash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{bibnamehash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{authorbibnamehash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{authornamehash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{authorfullhash}{23dea6978e29d673e8b2bd932829fe63}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Unlocking a \$200 Billion Dollar Collectibles Market on the Blockchain}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://www.forbes.com/sites/geraldfenech/2018/11/08/unlocking-a-200-billion-dollar-collectibles-market-on-the-blockchain/#4e2a60cf5554
-      \endverb
-      \verb{url}
-      \verb https://www.forbes.com/sites/geraldfenech/2018/11/08/unlocking-a-200-billion-dollar-collectibles-market-on-the-blockchain/#4e2a60cf5554
       \endverb
     \endentry
     \entry{aventus2018}{misc}{}
@@ -372,21 +568,51 @@
       \field{title}{A blockchain-based event ticketing protocol}
       \field{year}{2018}
     \endentry
-    \entry{griffin2018}{misc}{}
+    \entry{Frye2022}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=713a6c256edba266bd022c13c0b020d1}{%
-           family={Griffin},
+        {{un=0,uniquepart=base,hash=80aa9d044bc627ed0940c9cf9393b2a2}{%
+           family={Frye},
+           familyi={F\bibinitperiod},
+           given={Brian\bibnamedelima L},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{fullhash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{bibnamehash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{authorbibnamehash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{authornamehash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{authorfullhash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stanford Technology Law Review}
+      \field{number}{2}
+      \field{title}{After the gold rush: The future of blockchain, cryptocurrency and NFTs}
+      \field{volume}{25}
+      \field{year}{2022}
+      \field{pages}{112\bibrangedash 156}
+      \range{pages}{45}
+    \endentry
+    \entry{groth2016size}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f0d5c2124aca42e40182208688a5ccbf}{%
+           family={Groth},
            familyi={G\bibinitperiod},
-           given={J.},
+           given={Jens},
            giveni={J\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{fullhash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{bibnamehash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{authorbibnamehash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{authornamehash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{authorfullhash}{713a6c256edba266bd022c13c0b020d1}
+      \strng{namehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{fullhash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{bibnamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authorbibnamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authornamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authorfullhash}{f0d5c2124aca42e40182208688a5ccbf}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -394,14 +620,191 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Software licences as non-fungible tokens}
-      \field{year}{2018}
+      \field{journaltitle}{Annual International Conference on the Theory and Applications of Cryptographic Techniques (EUROCRYPT)}
+      \field{title}{On the Size of Pairing-based Non-interactive Arguments}
+      \field{year}{2016}
+    \endentry
+    \entry{Gudgeon2020}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=6dbc278a2f422a1e9c58288056f4829f}{%
+           family={Gudgeon},
+           familyi={G\bibinitperiod},
+           given={Lewis},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa8d5d90cdd88aa71285ac0ee650fc75}{%
+           family={Moreno-Sanchez},
+           familyi={M\bibinithyphendelim S\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d33b552c14a169cffed342438407ebd5}{%
+           family={Roos},
+           familyi={R\bibinitperiod},
+           given={Stefanie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa3b2e48b4dbdf96f470a9c25615dc30}{%
+           family={McCorry},
+           familyi={M\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=044061dd8826f333066f6d1eed145f63}{%
+           family={Gervais},
+           familyi={G\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d92d9fa67cec050877cced47a65dcae4}
+      \strng{fullhash}{f49f8e411a3cde70cfe8fa03759dc650}
+      \strng{bibnamehash}{f49f8e411a3cde70cfe8fa03759dc650}
+      \strng{authorbibnamehash}{f49f8e411a3cde70cfe8fa03759dc650}
+      \strng{authornamehash}{d92d9fa67cec050877cced47a65dcae4}
+      \strng{authorfullhash}{f49f8e411a3cde70cfe8fa03759dc650}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Financial Cryptography and Data Security}
+      \field{title}{SoK: Layer-two blockchain protocols}
+      \field{year}{2020}
+      \field{pages}{201\bibrangedash 226}
+      \range{pages}{26}
+    \endentry
+    \entry{Kugler2021}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=19a41a6c8909c24902144e088c528ae2}{%
+           family={Kugler},
+           familyi={K\bibinitperiod},
+           given={Logan},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{fullhash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{bibnamehash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{authorbibnamehash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{authornamehash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{authorfullhash}{19a41a6c8909c24902144e088c528ae2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{9}
+      \field{title}{Non-fungible tokens and the future of art}
+      \field{volume}{64}
+      \field{year}{2021}
+      \field{pages}{19\bibrangedash 20}
+      \range{pages}{2}
+    \endentry
+    \entry{MatterLabs2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5cc4761a506c8c241370a63ad59d3a22}{%
+           family={{Matter Labs}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {zkSync}%
+      }
+      \strng{namehash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{fullhash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{bibnamehash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{authorbibnamehash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{authornamehash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{authorfullhash}{5cc4761a506c8c241370a63ad59d3a22}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{zkSync Era documentation: Architecture and design principles}
+      \field{year}{2023}
       \verb{urlraw}
-      \verb https://medium.com/collabs-io/software-licences-as-non-fungible-tokens-1f0635913e41
+      \verb https://docs.zksync.io/zk-stack/
       \endverb
       \verb{url}
-      \verb https://medium.com/collabs-io/software-licences-as-non-fungible-tokens-1f0635913e41
+      \verb https://docs.zksync.io/zk-stack/
       \endverb
+    \endentry
+    \entry{Nadini2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=b51e947471e2039eb90d31facd4b03fc}{%
+           family={Nadini},
+           familyi={N\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=964f5858bfd4e6a8e105da1125743398}{%
+           family={Alessandretti},
+           familyi={A\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9f67c416b60de63faabc81b2e35e74f6}{%
+           family={Di\bibnamedelima Giacinto},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Flavio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c81464e712f3219ca9b39ffceea8ae3}{%
+           family={Martino},
+           familyi={M\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=578dd0d02865626d9fe222b65cec8558}{%
+           family={Aiello},
+           familyi={A\bibinitperiod},
+           given={Luca\bibnamedelima Maria},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8532d9be6c124f254353927432e2d846}{%
+           family={Baronchelli},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{aa9b12bdfefd1608848b4c178949d61b}
+      \strng{fullhash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \strng{bibnamehash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \strng{authorbibnamehash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \strng{authornamehash}{aa9b12bdfefd1608848b4c178949d61b}
+      \strng{authorfullhash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{number}{1}
+      \field{title}{Mapping the NFT revolution: Market trends, trade networks, and visual features}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{pages}{20902}
+      \range{pages}{1}
     \endentry
     \entry{nakamoto2008bitcoin}{misc}{}
       \name{author}{1}{}{%
@@ -466,25 +869,6 @@
       \verb https://docs-polygon-technology.translate.goog/zkEVM/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=imgs
       \endverb
     \endentry
-    \entry{PolygonzkEVMDiagram}{misc}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labeltitlesource}{title}
-      \field{title}{Polygon zkEVM Diagram}
-      \field{urlday}{20}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://docs.polygon.technology/img/zkEVM/fig1-simpl-arch.png
-      \endverb
-      \verb{url}
-      \verb https://docs.polygon.technology/img/zkEVM/fig1-simpl-arch.png
-      \endverb
-    \endentry
     \entry{qteishat2014}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -517,17 +901,11 @@
     \endentry
     \entry{Regner2019}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=6bc301860b132820f8b004ac9f328587}{%
+        {{un=0,uniquepart=base,hash=821afc2e7a393194682c49ad815e0a50}{%
            family={Regner},
            familyi={R\bibinitperiod},
-           given={Ferdinand},
+           given={Fabian},
            giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9f9bdc0de7172153a1089301401dd97b}{%
-           family={Schweizer},
-           familyi={S\bibinitperiod},
-           given={André},
-           giveni={A\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=244a2736a3187909b68e97d657f8add4}{%
            family={Urbach},
@@ -535,13 +913,22 @@
            given={Nils},
            giveni={N\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=02210a4a1500d762fb3b03c6f40caeab}{%
+           family={Schweizer},
+           familyi={S\bibinitperiod},
+           given={Andre},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{3441f912adf537a7ad0b11b7e613f1df}
-      \strng{fullhash}{97a7df4113e3f37272c6b918b133e7da}
-      \strng{bibnamehash}{97a7df4113e3f37272c6b918b133e7da}
-      \strng{authorbibnamehash}{97a7df4113e3f37272c6b918b133e7da}
-      \strng{authornamehash}{3441f912adf537a7ad0b11b7e613f1df}
-      \strng{authorfullhash}{97a7df4113e3f37272c6b918b133e7da}
+      \list{organization}{1}{%
+        {Association for Information Systems}%
+      }
+      \strng{namehash}{e1ce04f5bd15a05c5500e0eadf3698aa}
+      \strng{fullhash}{ac18b78a44c0ca69d011a5737a3130b6}
+      \strng{bibnamehash}{ac18b78a44c0ca69d011a5737a3130b6}
+      \strng{authorbibnamehash}{ac18b78a44c0ca69d011a5737a3130b6}
+      \strng{authornamehash}{e1ce04f5bd15a05c5500e0eadf3698aa}
+      \strng{authorfullhash}{ac18b78a44c0ca69d011a5737a3130b6}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
@@ -549,11 +936,39 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{40th International Conference on Information Systems}
-      \field{title}{NFTs in Practice - Non-Fungible Tokens as Core Component of a Blockchain-based Event Ticketing Application}
+      \field{journaltitle}{Proceedings of the 40th International Conference on Information Systems (ICIS)}
+      \field{title}{NFTs in practice--non-fungible tokens as core component of a blockchain-based event ticketing application}
       \field{year}{2019}
-      \field{pages}{1\bibrangedash 17}
-      \range{pages}{17}
+    \endentry
+    \entry{Sarmah2018}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fb7db5219df43f237076234426cbaad3}{%
+           family={Sarmah},
+           familyi={S\bibinitperiod},
+           given={Shilpi\bibnamedelima Saha},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fb7db5219df43f237076234426cbaad3}
+      \strng{fullhash}{fb7db5219df43f237076234426cbaad3}
+      \strng{bibnamehash}{fb7db5219df43f237076234426cbaad3}
+      \strng{authorbibnamehash}{fb7db5219df43f237076234426cbaad3}
+      \strng{authornamehash}{fb7db5219df43f237076234426cbaad3}
+      \strng{authorfullhash}{fb7db5219df43f237076234426cbaad3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Science and Engineering}
+      \field{number}{2}
+      \field{title}{Understanding blockchain technology}
+      \field{volume}{8}
+      \field{year}{2018}
+      \field{pages}{23\bibrangedash 29}
+      \range{pages}{7}
     \endentry
     \entry{SmartContractStructure}{misc}{}
       \field{sortinit}{S}
@@ -574,64 +989,36 @@
       \verb https://www.researchgate.net/figure/The-mechanism-of-smart-contracts_fig2_325899686
       \endverb
     \endentry
-    \entry{MerkleTree}{misc}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labeltitlesource}{title}
-      \field{title}{Space X Blueprint}
-      \field{urlday}{3}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{year}{2019}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://markpetherbridge.co.uk/blog/an-elementary-and-slightly-distilled-introduction-to-blockchain/
-      \endverb
-      \verb{url}
-      \verb https://markpetherbridge.co.uk/blog/an-elementary-and-slightly-distilled-introduction-to-blockchain/
-      \endverb
-    \endentry
-    \entry{steichen2018}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=6ba51442a63cca29e8ce2fd9eab8b861}{%
-           family={Steichen},
+    \entry{Stoll2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e99701c571e1539770399efbd57963d6}{%
+           family={Stoll},
            familyi={S\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=c51520c2c9b9c862448a0760178ce8f2}{%
-           family={Fiz},
-           familyi={F\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod},
+        {{un=0,uniquepart=base,hash=f2fa032e00beb9b60bd4558b3baee416}{%
+           family={Klaa{ß}en},
+           familyi={K\bibinitperiod},
+           given={Lena},
+           giveni={L\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=e4e703e322cbbe1f11098771cc8f83ce}{%
-           family={Norvill},
-           familyi={N\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=83811e582a4a8b94ea460a0c3014cdcf}{%
-           family={Shbair},
-           familyi={S\bibinitperiod},
-           given={W.},
-           giveni={W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7fcb69e15a31a2b61dc6b381e5bda38d}{%
-           family={State},
-           familyi={S\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
+        {{un=0,uniquepart=base,hash=93978392548483948e684d350e424eea}{%
+           family={Gallersdörfer},
+           familyi={G\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{c23c059e97b575dd06d166c7801e55d3}
-      \strng{fullhash}{97b063aa321a672fd4059559c04b18c0}
-      \strng{bibnamehash}{97b063aa321a672fd4059559c04b18c0}
-      \strng{authorbibnamehash}{97b063aa321a672fd4059559c04b18c0}
-      \strng{authornamehash}{c23c059e97b575dd06d166c7801e55d3}
-      \strng{authorfullhash}{97b063aa321a672fd4059559c04b18c0}
+      \list{publisher}{1}{%
+        {Cell Press}%
+      }
+      \strng{namehash}{fd5d81e2fbfd6c3d9b5ff2cb50c7d361}
+      \strng{fullhash}{fb3ab4ec1c53393033411cedb29a4197}
+      \strng{bibnamehash}{fb3ab4ec1c53393033411cedb29a4197}
+      \strng{authorbibnamehash}{fb3ab4ec1c53393033411cedb29a4197}
+      \strng{authornamehash}{fd5d81e2fbfd6c3d9b5ff2cb50c7d361}
+      \strng{authorfullhash}{fb3ab4ec1c53393033411cedb29a4197}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
@@ -639,36 +1026,110 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2018 IEEE International Conference on Internet of Things (iThings) and IEEE Green Computing and Communications (GreenCom) and IEEE Cyber, Physical and Social Computing (CPSCom) and IEEE Smart Data (SmartData)}
-      \field{title}{Blockchain-based, decentralized access control for IPFS}
-      \field{year}{2018}
-      \field{pages}{1499\bibrangedash 1506}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1109/Cybermatics_2018.2018.00253
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/8726493
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/8726493
-      \endverb
+      \field{journaltitle}{Joule}
+      \field{number}{7}
+      \field{title}{The carbon footprint of Bitcoin}
+      \field{volume}{3}
+      \field{year}{2021}
+      \field{pages}{1647\bibrangedash 1661}
+      \range{pages}{15}
     \endentry
-    \entry{Wackerow2024}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d5517bf0cf3637d92b83aa60d47f1620}{%
-           family={Wackerow},
-           familyi={W\bibinitperiod},
-           given={Paul},
-           giveni={P\bibinitperiod},
+    \entry{Valeonti2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=c2c6e1fef0192f0741677a01e9eb1170}{%
+           family={Valeonti},
+           familyi={V\bibinitperiod},
+           given={Foteini},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45146a8ffbd2d2f5deec7456cdd89109}{%
+           family={Bikakis},
+           familyi={B\bibinitperiod},
+           given={Antonis},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81fc3db7858db9ce1ee0954402639462}{%
+           family={Terras},
+           familyi={T\bibinitperiod},
+           given={Melissa},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c48158db5bd8330413093a3a70053cc}{%
+           family={Speed},
+           familyi={S\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae8eca01498c12776fc177f1b35c97af}{%
+           family={Hudson-Smith},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb8d18e110ff7c682d3980f35bdd7b23}{%
+           family={Chalkias},
+           familyi={C\bibinitperiod},
+           given={Kostis},
+           giveni={K\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{fullhash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{bibnamehash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{authorbibnamehash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{authornamehash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{authorfullhash}{d5517bf0cf3637d92b83aa60d47f1620}
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{5d7effac3ba33a867a7191d31955e2b2}
+      \strng{fullhash}{5f6a83db78a4456f0c87d76374c1de41}
+      \strng{bibnamehash}{5f6a83db78a4456f0c87d76374c1de41}
+      \strng{authorbibnamehash}{5f6a83db78a4456f0c87d76374c1de41}
+      \strng{authornamehash}{5d7effac3ba33a867a7191d31955e2b2}
+      \strng{authorfullhash}{5f6a83db78a4456f0c87d76374c1de41}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{21}
+      \field{title}{Crypto collectibles, museum funding and OpenGLAM: Challenges, opportunities and the potential of Non-Fungible Tokens (NFTs)}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{pages}{9931}
+      \range{pages}{1}
+    \endentry
+    \entry{Wang2021}{misc}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=dbb923b2eb3740d28592b75b64ac32c9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qin},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8fff790bcfaf1da25e827488542468f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Rujia},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ff53b99cb226c6384ebd0abb3e330b1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfddc702b63ce0bc63980f4069af1aca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Shiping},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9b79b7ea09059e8fc6242ca958ec5b5d}
+      \strng{fullhash}{2b6ff9b8c06474e41b383fa7a98c6445}
+      \strng{bibnamehash}{2b6ff9b8c06474e41b383fa7a98c6445}
+      \strng{authorbibnamehash}{2b6ff9b8c06474e41b383fa7a98c6445}
+      \strng{authornamehash}{9b79b7ea09059e8fc6242ca958ec5b5d}
+      \strng{authorfullhash}{2b6ff9b8c06474e41b383fa7a98c6445}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
@@ -676,55 +1137,127 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Ethereum platform review: Opportunities and challenges for private and consortium blockchains.}
-      \field{urlday}{19}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://ethereum.org/en/developers/docs/scaling/zk-rollups/
+      \field{eprintclass}{cs.CR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Non-fungible token (NFT): Overview, evaluation, opportunities and challenges}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2105.07447
       \endverb
-      \verb{url}
-      \verb https://ethereum.org/en/developers/docs/scaling/zk-rollups/
-      \endverb
+    \endentry
+    \entry{Wilson2022}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=91c3dde21f7f8cb123b7f69e1cbd6940}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Kirby\bibnamedelima B},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bbe0321e694140662b201ebf8a1d861}{%
+           family={Karg},
+           familyi={K\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0aa975ae25b2d6349c8a030814d1f30}{%
+           family={Ghaderi},
+           familyi={G\bibinitperiod},
+           given={Hoda},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{532abdc8cd4fe432d307b37f94d00a5e}
+      \strng{fullhash}{b2113a35d0961236944b26e0e6315092}
+      \strng{bibnamehash}{b2113a35d0961236944b26e0e6315092}
+      \strng{authorbibnamehash}{b2113a35d0961236944b26e0e6315092}
+      \strng{authornamehash}{532abdc8cd4fe432d307b37f94d00a5e}
+      \strng{authorfullhash}{b2113a35d0961236944b26e0e6315092}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Business Horizons}
+      \field{number}{5}
+      \field{title}{Prospecting non-fungible tokens in the digital economy: Stakeholders and ecosystem, risk and opportunity}
+      \field{volume}{65}
+      \field{year}{2022}
+      \field{pages}{657\bibrangedash 670}
+      \range{pages}{14}
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
-    \entry{BlockchainStructure}{misc}{}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+    \entry{Ante2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=51af847f7a6f2f8e0dc3c8f5b3fce1d9}{%
+           family={Ante},
+           familyi={A\bibinitperiod},
+           given={Lauri},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{fullhash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{bibnamehash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{authorbibnamehash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{authornamehash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \strng{authorfullhash}{51af847f7a6f2f8e0dc3c8f5b3fce1d9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Blockchain Structure}
-      \field{urlday}{3}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://statusneo.com/blockchain-architecture-understanding-the-structure-and-applications/
-      \endverb
-      \verb{url}
-      \verb https://statusneo.com/blockchain-architecture-understanding-the-structure-and-applications/
-      \endverb
+      \field{journaltitle}{FinTech}
+      \field{number}{3}
+      \field{title}{The non-fungible token (NFT) market and its relationship with Bitcoin and Ethereum}
+      \field{volume}{1}
+      \field{year}{2022}
+      \field{pages}{216\bibrangedash 224}
+      \range{pages}{9}
     \endentry
-    \entry{butcher2018}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=527dcefd4a095ee2de1a5753c0d9fdcd}{%
-           family={Butcher},
-           familyi={B\bibinitperiod},
-           given={M.},
+    \entry{ben2014succinct}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c225b1561fdce9ac9f61f1edca0e0160}{%
+           family={Ben-Sasson},
+           familyi={B\bibinithyphendelim S\bibinitperiod},
+           given={Eli},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfbdc8dc8205deeb7a8fbc765799dd0b}{%
+           family={Chiesa},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9a80df1ddea18e1b64f84a0cbcdc25f}{%
+           family={Tromer},
+           familyi={T\bibinitperiod},
+           given={Eran},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37e60561c9593ab3c5d37d85a184713e}{%
+           family={Virza},
+           familyi={V\bibinitperiod},
+           given={Madars},
            giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{fullhash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{bibnamehash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{authorbibnamehash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{authornamehash}{527dcefd4a095ee2de1a5753c0d9fdcd}
-      \strng{authorfullhash}{527dcefd4a095ee2de1a5753c0d9fdcd}
+      \strng{namehash}{efe95f795f4099043fbd4bc4466d77c6}
+      \strng{fullhash}{2d81fda7bd7ef6af75188ac8df854c96}
+      \strng{bibnamehash}{2d81fda7bd7ef6af75188ac8df854c96}
+      \strng{authorbibnamehash}{2d81fda7bd7ef6af75188ac8df854c96}
+      \strng{authornamehash}{efe95f795f4099043fbd4bc4466d77c6}
+      \strng{authorfullhash}{2d81fda7bd7ef6af75188ac8df854c96}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
@@ -732,13 +1265,56 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{What next? Oh yes, turning a luxury car into a non-fungible token}
-      \field{year}{2018}
+      \field{journaltitle}{Proceedings of the USENIX Security Symposium}
+      \field{title}{Succinct Non-Interactive Zero Knowledge for a von Neumann Architecture}
+      \field{year}{2014}
+    \endentry
+    \entry{bowe2017scalable}{report}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0274806506056a5f9c69300287f6063a}{%
+           family={Bowe},
+           familyi={B\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=015d26e4871eab7050331efee381386a}{%
+           family={Gabizon},
+           familyi={G\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0487f51f12e1650c1ecbe85c3d103eeb}{%
+           family={Miers},
+           familyi={M\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {IACR Cryptology ePrint Archive}%
+      }
+      \strng{namehash}{83214c3fa9c17f350cacea29545659fd}
+      \strng{fullhash}{b1d4b052fe5d71847f82c05321326245}
+      \strng{bibnamehash}{b1d4b052fe5d71847f82c05321326245}
+      \strng{authorbibnamehash}{b1d4b052fe5d71847f82c05321326245}
+      \strng{authornamehash}{83214c3fa9c17f350cacea29545659fd}
+      \strng{authorfullhash}{b1d4b052fe5d71847f82c05321326245}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2017/1050}
+      \field{title}{Scalable Multi-party Computation for zk-SNARK Parameters in the Random Beacon Model}
+      \field{type}{techreport}
+      \field{year}{2017}
       \verb{urlraw}
-      \verb https://tcrn.ch/2uPJuIf
+      \verb https://eprint.iacr.org/2017/1050
       \endverb
       \verb{url}
-      \verb https://tcrn.ch/2uPJuIf
+      \verb https://eprint.iacr.org/2017/1050
       \endverb
     \endentry
     \entry{Buterin2016}{online}{}
@@ -756,11 +1332,11 @@
       \strng{authorbibnamehash}{aad1df1eaf8202bd8dda5cb125b5c4ab}
       \strng{authornamehash}{aad1df1eaf8202bd8dda5cb125b5c4ab}
       \strng{authorfullhash}{aad1df1eaf8202bd8dda5cb125b5c4ab}
+      \field{extraname}{1}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Ethereum platform review: Opportunities and challenges for private and consortium blockchains.}
@@ -774,6 +1350,39 @@
       \endverb
       \verb{url}
       \verb http://www.smallake.kr/wp-content/uploads/2016/06/314477721-Ethereum-Platform-%20Review-Opportunities-and-Challenges-for-Private-and-Consortium-Blockchains.pdf
+      \endverb
+    \endentry
+    \entry{Buterin2021}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=850981945102d0f671b6762173c8988a}{%
+           family={Buterin},
+           familyi={B\bibinitperiod},
+           given={Vitalik},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhash}{850981945102d0f671b6762173c8988a}
+      \strng{bibnamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authorbibnamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authornamehash}{850981945102d0f671b6762173c8988a}
+      \strng{authorfullhash}{850981945102d0f671b6762173c8988a}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Ethereum Foundation Blog}
+      \field{note}{Accessed: 2024-12-01}
+      \field{title}{An incomplete guide to rollups}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://vitalik.ca/general/2021/01/05/rollup.html
+      \endverb
+      \verb{url}
+      \verb https://vitalik.ca/general/2021/01/05/rollup.html
       \endverb
     \endentry
     \entry{Chaliasos2023}{article}{}
@@ -835,6 +1444,91 @@
       \field{journaltitle}{Imperial College London}
       \field{title}{Analyzing and Benchmarking ZK-Rollups}
       \field{year}{2023}
+    \endentry
+    \entry{Chalmers2022}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=dd824f2db0bcba8a4cf1a382e3accbfe}{%
+           family={Chalmers},
+           familyi={C\bibinitperiod},
+           given={Dominik},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d390cf68200d07baa26b5a7a93e4d98f}{%
+           family={Fisch},
+           familyi={F\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83a0b97ccbda3cc6835186ca3bc095ff}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={Russell},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcfafad4f069cb869369cb1830c1a825}{%
+           family={Quinn},
+           familyi={Q\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=604e15fd1714275673736d598c9e7e89}{%
+           family={Recker},
+           familyi={R\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c7b28a1388812153c30a06cf01682b17}
+      \strng{fullhash}{5ac1d0e63a471d257a8ffe03abf53813}
+      \strng{bibnamehash}{5ac1d0e63a471d257a8ffe03abf53813}
+      \strng{authorbibnamehash}{5ac1d0e63a471d257a8ffe03abf53813}
+      \strng{authornamehash}{c7b28a1388812153c30a06cf01682b17}
+      \strng{authorfullhash}{5ac1d0e63a471d257a8ffe03abf53813}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Business Venturing Insights}
+      \field{title}{Beyond the bubble: Will NFTs and digital proof of ownership empower creative industry entrepreneurs?}
+      \field{volume}{17}
+      \field{year}{2022}
+      \field{pages}{e00309}
+      \range{pages}{-1}
+    \endentry
+    \entry{Chohan2021}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cd19e74cb4c4cfc565e01bd15e9094bb}{%
+           family={Chohan},
+           familyi={C\bibinitperiod},
+           given={Usman\bibnamedelima W},
+           giveni={U\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Critical Blockchain Research Initiative (CBRI)}%
+      }
+      \strng{namehash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{fullhash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{bibnamehash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{authorbibnamehash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{authornamehash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \strng{authorfullhash}{cd19e74cb4c4cfc565e01bd15e9094bb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Non-fungible tokens: Blockchains, scarcity, and value}
+      \field{type}{Working Paper}
+      \field{year}{2021}
     \endentry
     \entry{delmolino2016}{inbook}{}
       \name{author}{5}{}{%
@@ -937,39 +1631,71 @@
       \verb https://link.springer.com/chapter/10.1007/978-3-662-53357-4_7
       \endverb
     \endentry
-    \entry{entriken2018}{online}{}
+    \entry{Dowling2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f30ec1f394c32d5058097c98ac3d2d3a}{%
+           family={Dowling},
+           familyi={D\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{fullhash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{bibnamehash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{authorbibnamehash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{authornamehash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \strng{authorfullhash}{f30ec1f394c32d5058097c98ac3d2d3a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Finance Research Letters}
+      \field{title}{Is non-fungible token pricing driven by cryptocurrencies?}
+      \field{volume}{44}
+      \field{year}{2022}
+      \field{pages}{102097}
+      \range{pages}{1}
+    \endentry
+    \entry{Entriken2018}{misc}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=3196ad80c93341b781ead1e014cc2cb5}{%
+        {{un=0,uniquepart=base,hash=2ec990b78817c295355cb14bb1644ea2}{%
            family={Entriken},
            familyi={E\bibinitperiod},
-           given={W.},
+           given={William},
            giveni={W\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=f6a03da881237e5551b4f553f8b1cf48}{%
+        {{un=0,uniquepart=base,hash=b6d0242d0ac13e2113c737e3a65c7860}{%
            family={Shirley},
            familyi={S\bibinitperiod},
-           given={D.},
+           given={Dieter},
            giveni={D\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=0aab1a186e4d45caab2cd3ac22a9957d}{%
+        {{un=0,uniquepart=base,hash=757b45fde6fb23501b318053820cf0c8}{%
            family={Evans},
            familyi={E\bibinitperiod},
-           given={J.},
+           given={Jacob},
            giveni={J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a484b6ec0a6aaf77750b25e910a243e4}{%
+        {{un=0,uniquepart=base,hash=5788ef707ef79a303e86496b33028cfa}{%
            family={Sachs},
            familyi={S\bibinitperiod},
-           given={N.},
+           given={Nastassia},
            giveni={N\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{5d764f37ca554004353b0bdc8a6c7aec}
-      \strng{fullhash}{1dd8615fa22946c3f9699f7251986b4c}
-      \strng{bibnamehash}{1dd8615fa22946c3f9699f7251986b4c}
-      \strng{authorbibnamehash}{1dd8615fa22946c3f9699f7251986b4c}
-      \strng{authornamehash}{5d764f37ca554004353b0bdc8a6c7aec}
-      \strng{authorfullhash}{1dd8615fa22946c3f9699f7251986b4c}
+      \strng{namehash}{9d161d794bea8e1af56272f3869eeb8e}
+      \strng{fullhash}{3921617b8ef76ff16c7c7c78986ddfb4}
+      \strng{bibnamehash}{3921617b8ef76ff16c7c7c78986ddfb4}
+      \strng{authorbibnamehash}{3921617b8ef76ff16c7c7c78986ddfb4}
+      \strng{authornamehash}{9d161d794bea8e1af56272f3869eeb8e}
+      \strng{authorfullhash}{3921617b8ef76ff16c7c7c78986ddfb4}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{extradatescope}{labelyear}
@@ -977,44 +1703,15 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{ERC-721 Non-Fungible Token Standard}
+      \field{howpublished}{Ethereum Improvement Proposals}
+      \field{number}{721}
+      \field{title}{ERC-721: Non-fungible token standard}
       \field{year}{2018}
       \verb{urlraw}
       \verb https://eips.ethereum.org/EIPS/eip-721
       \endverb
       \verb{url}
       \verb https://eips.ethereum.org/EIPS/eip-721
-      \endverb
-    \endentry
-    \entry{fenech2018}{misc}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=23dea6978e29d673e8b2bd932829fe63}{%
-           family={Fenech},
-           familyi={F\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{fullhash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{bibnamehash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{authorbibnamehash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{authornamehash}{23dea6978e29d673e8b2bd932829fe63}
-      \strng{authorfullhash}{23dea6978e29d673e8b2bd932829fe63}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Unlocking a \$200 Billion Dollar Collectibles Market on the Blockchain}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://www.forbes.com/sites/geraldfenech/2018/11/08/unlocking-a-200-billion-dollar-collectibles-market-on-the-blockchain/#4e2a60cf5554
-      \endverb
-      \verb{url}
-      \verb https://www.forbes.com/sites/geraldfenech/2018/11/08/unlocking-a-200-billion-dollar-collectibles-market-on-the-blockchain/#4e2a60cf5554
       \endverb
     \endentry
     \entry{aventus2018}{misc}{}
@@ -1044,21 +1741,51 @@
       \field{title}{A blockchain-based event ticketing protocol}
       \field{year}{2018}
     \endentry
-    \entry{griffin2018}{misc}{}
+    \entry{Frye2022}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=713a6c256edba266bd022c13c0b020d1}{%
-           family={Griffin},
+        {{un=0,uniquepart=base,hash=80aa9d044bc627ed0940c9cf9393b2a2}{%
+           family={Frye},
+           familyi={F\bibinitperiod},
+           given={Brian\bibnamedelima L},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{fullhash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{bibnamehash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{authorbibnamehash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{authornamehash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \strng{authorfullhash}{80aa9d044bc627ed0940c9cf9393b2a2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stanford Technology Law Review}
+      \field{number}{2}
+      \field{title}{After the gold rush: The future of blockchain, cryptocurrency and NFTs}
+      \field{volume}{25}
+      \field{year}{2022}
+      \field{pages}{112\bibrangedash 156}
+      \range{pages}{45}
+    \endentry
+    \entry{groth2016size}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f0d5c2124aca42e40182208688a5ccbf}{%
+           family={Groth},
            familyi={G\bibinitperiod},
-           given={J.},
+           given={Jens},
            giveni={J\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{fullhash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{bibnamehash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{authorbibnamehash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{authornamehash}{713a6c256edba266bd022c13c0b020d1}
-      \strng{authorfullhash}{713a6c256edba266bd022c13c0b020d1}
+      \strng{namehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{fullhash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{bibnamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authorbibnamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authornamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authorfullhash}{f0d5c2124aca42e40182208688a5ccbf}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -1066,14 +1793,191 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Software licences as non-fungible tokens}
-      \field{year}{2018}
+      \field{journaltitle}{Annual International Conference on the Theory and Applications of Cryptographic Techniques (EUROCRYPT)}
+      \field{title}{On the Size of Pairing-based Non-interactive Arguments}
+      \field{year}{2016}
+    \endentry
+    \entry{Gudgeon2020}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=6dbc278a2f422a1e9c58288056f4829f}{%
+           family={Gudgeon},
+           familyi={G\bibinitperiod},
+           given={Lewis},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa8d5d90cdd88aa71285ac0ee650fc75}{%
+           family={Moreno-Sanchez},
+           familyi={M\bibinithyphendelim S\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d33b552c14a169cffed342438407ebd5}{%
+           family={Roos},
+           familyi={R\bibinitperiod},
+           given={Stefanie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa3b2e48b4dbdf96f470a9c25615dc30}{%
+           family={McCorry},
+           familyi={M\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=044061dd8826f333066f6d1eed145f63}{%
+           family={Gervais},
+           familyi={G\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d92d9fa67cec050877cced47a65dcae4}
+      \strng{fullhash}{f49f8e411a3cde70cfe8fa03759dc650}
+      \strng{bibnamehash}{f49f8e411a3cde70cfe8fa03759dc650}
+      \strng{authorbibnamehash}{f49f8e411a3cde70cfe8fa03759dc650}
+      \strng{authornamehash}{d92d9fa67cec050877cced47a65dcae4}
+      \strng{authorfullhash}{f49f8e411a3cde70cfe8fa03759dc650}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Financial Cryptography and Data Security}
+      \field{title}{SoK: Layer-two blockchain protocols}
+      \field{year}{2020}
+      \field{pages}{201\bibrangedash 226}
+      \range{pages}{26}
+    \endentry
+    \entry{Kugler2021}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=19a41a6c8909c24902144e088c528ae2}{%
+           family={Kugler},
+           familyi={K\bibinitperiod},
+           given={Logan},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{fullhash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{bibnamehash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{authorbibnamehash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{authornamehash}{19a41a6c8909c24902144e088c528ae2}
+      \strng{authorfullhash}{19a41a6c8909c24902144e088c528ae2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{9}
+      \field{title}{Non-fungible tokens and the future of art}
+      \field{volume}{64}
+      \field{year}{2021}
+      \field{pages}{19\bibrangedash 20}
+      \range{pages}{2}
+    \endentry
+    \entry{MatterLabs2023}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5cc4761a506c8c241370a63ad59d3a22}{%
+           family={{Matter Labs}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {zkSync}%
+      }
+      \strng{namehash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{fullhash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{bibnamehash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{authorbibnamehash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{authornamehash}{5cc4761a506c8c241370a63ad59d3a22}
+      \strng{authorfullhash}{5cc4761a506c8c241370a63ad59d3a22}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{zkSync Era documentation: Architecture and design principles}
+      \field{year}{2023}
       \verb{urlraw}
-      \verb https://medium.com/collabs-io/software-licences-as-non-fungible-tokens-1f0635913e41
+      \verb https://docs.zksync.io/zk-stack/
       \endverb
       \verb{url}
-      \verb https://medium.com/collabs-io/software-licences-as-non-fungible-tokens-1f0635913e41
+      \verb https://docs.zksync.io/zk-stack/
       \endverb
+    \endentry
+    \entry{Nadini2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=b51e947471e2039eb90d31facd4b03fc}{%
+           family={Nadini},
+           familyi={N\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=964f5858bfd4e6a8e105da1125743398}{%
+           family={Alessandretti},
+           familyi={A\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9f67c416b60de63faabc81b2e35e74f6}{%
+           family={Di\bibnamedelima Giacinto},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Flavio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c81464e712f3219ca9b39ffceea8ae3}{%
+           family={Martino},
+           familyi={M\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=578dd0d02865626d9fe222b65cec8558}{%
+           family={Aiello},
+           familyi={A\bibinitperiod},
+           given={Luca\bibnamedelima Maria},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8532d9be6c124f254353927432e2d846}{%
+           family={Baronchelli},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{aa9b12bdfefd1608848b4c178949d61b}
+      \strng{fullhash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \strng{bibnamehash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \strng{authorbibnamehash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \strng{authornamehash}{aa9b12bdfefd1608848b4c178949d61b}
+      \strng{authorfullhash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{number}{1}
+      \field{title}{Mapping the NFT revolution: Market trends, trade networks, and visual features}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{pages}{20902}
+      \range{pages}{1}
     \endentry
     \entry{nakamoto2008bitcoin}{misc}{}
       \name{author}{1}{}{%
@@ -1138,25 +2042,6 @@
       \verb https://docs-polygon-technology.translate.goog/zkEVM/?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=imgs
       \endverb
     \endentry
-    \entry{PolygonzkEVMDiagram}{misc}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labeltitlesource}{title}
-      \field{title}{Polygon zkEVM Diagram}
-      \field{urlday}{20}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2023}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://docs.polygon.technology/img/zkEVM/fig1-simpl-arch.png
-      \endverb
-      \verb{url}
-      \verb https://docs.polygon.technology/img/zkEVM/fig1-simpl-arch.png
-      \endverb
-    \endentry
     \entry{qteishat2014}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1189,17 +2074,11 @@
     \endentry
     \entry{Regner2019}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=6bc301860b132820f8b004ac9f328587}{%
+        {{un=0,uniquepart=base,hash=821afc2e7a393194682c49ad815e0a50}{%
            family={Regner},
            familyi={R\bibinitperiod},
-           given={Ferdinand},
+           given={Fabian},
            giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9f9bdc0de7172153a1089301401dd97b}{%
-           family={Schweizer},
-           familyi={S\bibinitperiod},
-           given={André},
-           giveni={A\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=244a2736a3187909b68e97d657f8add4}{%
            family={Urbach},
@@ -1207,13 +2086,22 @@
            given={Nils},
            giveni={N\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=02210a4a1500d762fb3b03c6f40caeab}{%
+           family={Schweizer},
+           familyi={S\bibinitperiod},
+           given={Andre},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{3441f912adf537a7ad0b11b7e613f1df}
-      \strng{fullhash}{97a7df4113e3f37272c6b918b133e7da}
-      \strng{bibnamehash}{97a7df4113e3f37272c6b918b133e7da}
-      \strng{authorbibnamehash}{97a7df4113e3f37272c6b918b133e7da}
-      \strng{authornamehash}{3441f912adf537a7ad0b11b7e613f1df}
-      \strng{authorfullhash}{97a7df4113e3f37272c6b918b133e7da}
+      \list{organization}{1}{%
+        {Association for Information Systems}%
+      }
+      \strng{namehash}{e1ce04f5bd15a05c5500e0eadf3698aa}
+      \strng{fullhash}{ac18b78a44c0ca69d011a5737a3130b6}
+      \strng{bibnamehash}{ac18b78a44c0ca69d011a5737a3130b6}
+      \strng{authorbibnamehash}{ac18b78a44c0ca69d011a5737a3130b6}
+      \strng{authornamehash}{e1ce04f5bd15a05c5500e0eadf3698aa}
+      \strng{authorfullhash}{ac18b78a44c0ca69d011a5737a3130b6}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
@@ -1221,11 +2109,39 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{40th International Conference on Information Systems}
-      \field{title}{NFTs in Practice - Non-Fungible Tokens as Core Component of a Blockchain-based Event Ticketing Application}
+      \field{journaltitle}{Proceedings of the 40th International Conference on Information Systems (ICIS)}
+      \field{title}{NFTs in practice--non-fungible tokens as core component of a blockchain-based event ticketing application}
       \field{year}{2019}
-      \field{pages}{1\bibrangedash 17}
-      \range{pages}{17}
+    \endentry
+    \entry{Sarmah2018}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fb7db5219df43f237076234426cbaad3}{%
+           family={Sarmah},
+           familyi={S\bibinitperiod},
+           given={Shilpi\bibnamedelima Saha},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fb7db5219df43f237076234426cbaad3}
+      \strng{fullhash}{fb7db5219df43f237076234426cbaad3}
+      \strng{bibnamehash}{fb7db5219df43f237076234426cbaad3}
+      \strng{authorbibnamehash}{fb7db5219df43f237076234426cbaad3}
+      \strng{authornamehash}{fb7db5219df43f237076234426cbaad3}
+      \strng{authorfullhash}{fb7db5219df43f237076234426cbaad3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer Science and Engineering}
+      \field{number}{2}
+      \field{title}{Understanding blockchain technology}
+      \field{volume}{8}
+      \field{year}{2018}
+      \field{pages}{23\bibrangedash 29}
+      \range{pages}{7}
     \endentry
     \entry{SmartContractStructure}{misc}{}
       \field{sortinit}{S}
@@ -1246,64 +2162,36 @@
       \verb https://www.researchgate.net/figure/The-mechanism-of-smart-contracts_fig2_325899686
       \endverb
     \endentry
-    \entry{MerkleTree}{misc}{}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labeltitlesource}{title}
-      \field{title}{Space X Blueprint}
-      \field{urlday}{3}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{year}{2019}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://markpetherbridge.co.uk/blog/an-elementary-and-slightly-distilled-introduction-to-blockchain/
-      \endverb
-      \verb{url}
-      \verb https://markpetherbridge.co.uk/blog/an-elementary-and-slightly-distilled-introduction-to-blockchain/
-      \endverb
-    \endentry
-    \entry{steichen2018}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=6ba51442a63cca29e8ce2fd9eab8b861}{%
-           family={Steichen},
+    \entry{Stoll2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e99701c571e1539770399efbd57963d6}{%
+           family={Stoll},
            familyi={S\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=c51520c2c9b9c862448a0760178ce8f2}{%
-           family={Fiz},
-           familyi={F\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod},
+        {{un=0,uniquepart=base,hash=f2fa032e00beb9b60bd4558b3baee416}{%
+           family={Klaa{ß}en},
+           familyi={K\bibinitperiod},
+           given={Lena},
+           giveni={L\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=e4e703e322cbbe1f11098771cc8f83ce}{%
-           family={Norvill},
-           familyi={N\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=83811e582a4a8b94ea460a0c3014cdcf}{%
-           family={Shbair},
-           familyi={S\bibinitperiod},
-           given={W.},
-           giveni={W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7fcb69e15a31a2b61dc6b381e5bda38d}{%
-           family={State},
-           familyi={S\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
+        {{un=0,uniquepart=base,hash=93978392548483948e684d350e424eea}{%
+           family={Gallersdörfer},
+           familyi={G\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{c23c059e97b575dd06d166c7801e55d3}
-      \strng{fullhash}{97b063aa321a672fd4059559c04b18c0}
-      \strng{bibnamehash}{97b063aa321a672fd4059559c04b18c0}
-      \strng{authorbibnamehash}{97b063aa321a672fd4059559c04b18c0}
-      \strng{authornamehash}{c23c059e97b575dd06d166c7801e55d3}
-      \strng{authorfullhash}{97b063aa321a672fd4059559c04b18c0}
+      \list{publisher}{1}{%
+        {Cell Press}%
+      }
+      \strng{namehash}{fd5d81e2fbfd6c3d9b5ff2cb50c7d361}
+      \strng{fullhash}{fb3ab4ec1c53393033411cedb29a4197}
+      \strng{bibnamehash}{fb3ab4ec1c53393033411cedb29a4197}
+      \strng{authorbibnamehash}{fb3ab4ec1c53393033411cedb29a4197}
+      \strng{authornamehash}{fd5d81e2fbfd6c3d9b5ff2cb50c7d361}
+      \strng{authorfullhash}{fb3ab4ec1c53393033411cedb29a4197}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
@@ -1311,36 +2199,110 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2018 IEEE International Conference on Internet of Things (iThings) and IEEE Green Computing and Communications (GreenCom) and IEEE Cyber, Physical and Social Computing (CPSCom) and IEEE Smart Data (SmartData)}
-      \field{title}{Blockchain-based, decentralized access control for IPFS}
-      \field{year}{2018}
-      \field{pages}{1499\bibrangedash 1506}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1109/Cybermatics_2018.2018.00253
-      \endverb
-      \verb{urlraw}
-      \verb https://ieeexplore.ieee.org/document/8726493
-      \endverb
-      \verb{url}
-      \verb https://ieeexplore.ieee.org/document/8726493
-      \endverb
+      \field{journaltitle}{Joule}
+      \field{number}{7}
+      \field{title}{The carbon footprint of Bitcoin}
+      \field{volume}{3}
+      \field{year}{2021}
+      \field{pages}{1647\bibrangedash 1661}
+      \range{pages}{15}
     \endentry
-    \entry{Wackerow2024}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d5517bf0cf3637d92b83aa60d47f1620}{%
-           family={Wackerow},
-           familyi={W\bibinitperiod},
-           given={Paul},
-           giveni={P\bibinitperiod},
+    \entry{Valeonti2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=c2c6e1fef0192f0741677a01e9eb1170}{%
+           family={Valeonti},
+           familyi={V\bibinitperiod},
+           given={Foteini},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45146a8ffbd2d2f5deec7456cdd89109}{%
+           family={Bikakis},
+           familyi={B\bibinitperiod},
+           given={Antonis},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81fc3db7858db9ce1ee0954402639462}{%
+           family={Terras},
+           familyi={T\bibinitperiod},
+           given={Melissa},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c48158db5bd8330413093a3a70053cc}{%
+           family={Speed},
+           familyi={S\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae8eca01498c12776fc177f1b35c97af}{%
+           family={Hudson-Smith},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb8d18e110ff7c682d3980f35bdd7b23}{%
+           family={Chalkias},
+           familyi={C\bibinitperiod},
+           given={Kostis},
+           giveni={K\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{fullhash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{bibnamehash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{authorbibnamehash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{authornamehash}{d5517bf0cf3637d92b83aa60d47f1620}
-      \strng{authorfullhash}{d5517bf0cf3637d92b83aa60d47f1620}
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{5d7effac3ba33a867a7191d31955e2b2}
+      \strng{fullhash}{5f6a83db78a4456f0c87d76374c1de41}
+      \strng{bibnamehash}{5f6a83db78a4456f0c87d76374c1de41}
+      \strng{authorbibnamehash}{5f6a83db78a4456f0c87d76374c1de41}
+      \strng{authornamehash}{5d7effac3ba33a867a7191d31955e2b2}
+      \strng{authorfullhash}{5f6a83db78a4456f0c87d76374c1de41}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{21}
+      \field{title}{Crypto collectibles, museum funding and OpenGLAM: Challenges, opportunities and the potential of Non-Fungible Tokens (NFTs)}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{pages}{9931}
+      \range{pages}{1}
+    \endentry
+    \entry{Wang2021}{misc}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=dbb923b2eb3740d28592b75b64ac32c9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qin},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8fff790bcfaf1da25e827488542468f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Rujia},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ff53b99cb226c6384ebd0abb3e330b1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfddc702b63ce0bc63980f4069af1aca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Shiping},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9b79b7ea09059e8fc6242ca958ec5b5d}
+      \strng{fullhash}{2b6ff9b8c06474e41b383fa7a98c6445}
+      \strng{bibnamehash}{2b6ff9b8c06474e41b383fa7a98c6445}
+      \strng{authorbibnamehash}{2b6ff9b8c06474e41b383fa7a98c6445}
+      \strng{authornamehash}{9b79b7ea09059e8fc6242ca958ec5b5d}
+      \strng{authorfullhash}{2b6ff9b8c06474e41b383fa7a98c6445}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
@@ -1348,18 +2310,58 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Ethereum platform review: Opportunities and challenges for private and consortium blockchains.}
-      \field{urlday}{19}
-      \field{urlmonth}{5}
-      \field{urlyear}{2025}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://ethereum.org/en/developers/docs/scaling/zk-rollups/
+      \field{eprintclass}{cs.CR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Non-fungible token (NFT): Overview, evaluation, opportunities and challenges}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2105.07447
       \endverb
-      \verb{url}
-      \verb https://ethereum.org/en/developers/docs/scaling/zk-rollups/
-      \endverb
+    \endentry
+    \entry{Wilson2022}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=91c3dde21f7f8cb123b7f69e1cbd6940}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Kirby\bibnamedelima B},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bbe0321e694140662b201ebf8a1d861}{%
+           family={Karg},
+           familyi={K\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0aa975ae25b2d6349c8a030814d1f30}{%
+           family={Ghaderi},
+           familyi={G\bibinitperiod},
+           given={Hoda},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{532abdc8cd4fe432d307b37f94d00a5e}
+      \strng{fullhash}{b2113a35d0961236944b26e0e6315092}
+      \strng{bibnamehash}{b2113a35d0961236944b26e0e6315092}
+      \strng{authorbibnamehash}{b2113a35d0961236944b26e0e6315092}
+      \strng{authornamehash}{532abdc8cd4fe432d307b37f94d00a5e}
+      \strng{authorfullhash}{b2113a35d0961236944b26e0e6315092}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Business Horizons}
+      \field{number}{5}
+      \field{title}{Prospecting non-fungible tokens in the digital economy: Stakeholders and ecosystem, risk and opportunity}
+      \field{volume}{65}
+      \field{year}{2022}
+      \field{pages}{657\bibrangedash 670}
+      \range{pages}{14}
     \endentry
   \enddatalist
 \endrefsection

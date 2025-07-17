@@ -4,47 +4,42 @@
 \section{Kesimpulan}
 \label{sec:kesimpulan}
 
-Berdasarkan hasil implementasi dan pengujian yang telah dilakukan, maka dapat
-diambil beberapa kesimpulan sebagai berikut:
-
-\begin{enumerate}[nolistsep]
-  \item Pembuatan platform marketplace tiket konser berbasis smart contract berhasil
-        dilakukan menggunakan kontrak ERC-721 yang dikembangkan dalam bahasa Solidity
-        dan di-deploy pada jaringan Layer-2 Ethereum, yaitu Polygon zkEVM. Kontrak ini
-        mampu mengelola proses minting, validasi penggunaan tiket, dan refund secara
-        terdesentralisasi.
-
-  \item Hasil pengujian menunjukkan bahwa fungsi \texttt{purchaseTicket},
-        \texttt{useTicket}, dan \\ \texttt{refundTicket} dapat berjalan sesuai dengan
-        logika yang telah ditentukan. Transaksi minting tiket berhasil tercatat pada
-        block explorer dengan metadata dan informasi kepemilikan yang sesuai dengan
-        hasil simulasi di sisi frontend.
-
-  \item Integrasi antara smart contract, antarmuka pengguna berbasis Next.js, dan
-        Firebase untuk otentikasi serta penyimpanan data pembelian memberikan
-        pengalaman pengguna yang cukup baik dan menunjukkan potensi penggunaan
-        teknologi blockchain dalam sistem distribusi tiket yang lebih transparan, aman,
-        dan bebas dari pemalsuan.
-\end{enumerate}
-
-\section{Saran}
-\label{chap:saran}
-
-Untuk pengembangan lebih lanjut terhadap sistem marketplace tiket konser
-berbasis smart contract ini, beberapa saran yang dapat dipertimbangkan antara
-lain:
-
-\begin{enumerate}[nolistsep]
-  \item Memperbaiki sistem validasi penggunaan tiket agar dapat terintegrasi langsung
-        dengan sistem fisik (misalnya menggunakan QR code scanner) untuk kebutuhan gate
-        checking saat konser berlangsung.
-
-  \item Menambahkan fitur sekunder seperti pasar jual beli tiket bekas (secondary
-        marketplace) yang memungkinkan pengguna untuk menjual kembali tiket yang telah
-        mereka beli dengan tetap menjaga kontrol kepemilikan melalui NFT.
-
-  \item Mengembangkan UI/UX yang lebih ramah pengguna dan memperluas dukungan terhadap
-        jaringan blockchain lainnya seperti Arbitrum, Base, atau StarkNet untuk
-        menyediakan pilihan ekosistem Layer-2 yang lebih fleksibel sesuai kebutuhan
-        pengguna.
-\end{enumerate}
+Berdasarkan analisis komprehensif yang telah dilakukan terhadap implementasi
+\emph{smart contract} Ticket Marketplace pada tiga jaringan blockchain yang
+berbeda, yaitu Ethereum Sepolia Testnet, Polygon zkEVM Cardona Testnet, dan
+Polygon PoS Amoy Testnet, dapat disimpulkan bahwa setiap jaringan menunjukkan
+karakteristik unik yang memberikan keunggulan spesifik sesuai dengan kebutuhan
+aplikasi yang berbeda. Pengujian yang dilakukan secara sistematis mulai dari
+penerapan \emph{smart contract}, pembuatan event, hingga pembelian tiket
+individu memberikan gambaran menyeluruh tentang kinerja aktual yang dapat
+diharapkan dalam implementasi lingkungan produksi. Jaringan Cardona zkEVM
+menunjukkan keunggulan yang sangat signifikan dalam hal efisiensi biaya
+operasional, dengan harga gas yang konsisten pada level 0.01 Gwei biaya
+menghasilkan deployment hanya 0.0000525 ETH dan biaya operasional yang sangat
+minimal untuk seluruh siklus hidup aplikasi marketplace. Keunggulan efektivitas
+biaya ini menjadikan Cardona sebagai pilihan optimal untuk aplikasi yang
+mengutamakan keberlanjutan dan skalabilitas jangka panjang, terutama untuk
+pasar NFT yang memerlukan volume transaksi tinggi dengan struktur biaya yang
+dapat diprediksi. Namun demikian, trade-off yang harus diterima adalah waktu
+eksekusi yang relatif lebih lama, dengan penerapan memerlukan 13,20 detik dan
+operasi individu berkisar 8-9 detik, yang mencerminkan overhead komputasi dari
+verifikasi bukti nol-pengetahuan yang merupakan karakteristik fundamental dari
+teknologi zkEVM. Jaringan Amoy menunjukkan keunggulan dalam hal kecepatan
+eksekusi dan responsiveness, dengan waktu deployment tercepat 5.84 detik dan
+operasi pembelian tiket yang dapat diselesaikan dalam rentang 2.31 hingga 6.79
+detik. Performa temporal yang unggul ini sangat menguntungkan untuk aplikasi
+yang mengutamakan pengalaman pengguna dan interaksi real-time, dimana daya
+tanggap sistem menjadi faktor penentu keberhasilan. Infrastruktur Polygon PoS
+yang matang dan mapan memberikan kepercayaan diri untuk menangani perdagangan
+frekuensi tinggi dan operasi yang sensitif terhadap waktu dalam lingkungan
+pasar. Namun, keunggulan kecepatan ini disertai dengan biaya premium yang
+substansial, dengan harga gas berkisar 37-41 Gwei menghasilkan biaya
+operasional yang secara signifikan lebih tinggi dibandingkan alternatif
+lainnya. Ethereum Sepolia menunjukkan karakteristik seimbang yang mencerminkan
+kondisi mainnet Ethereum, dengan harga gas berkisar 21-24 Gwei dan waktu
+eksekusi moderat 8-13 detik untuk berbagai operasi. Jaringan ini memberikan
+pratinjau realistis untuk strategi penerapan dan proyeksi biaya yang akan
+dihadapi dalam lingkungan mainnet produksi. Stabilitas dan prediktabilitas yang
+ditunjukkan Sepolia memberikan kepercayaan diri untuk perencanaan operasional
+jangka panjang, meskipun tidak menunjukkan kinerja luar biasa dalam
+metrik-metrik spesifik dibandingkan solusi layer-2.
